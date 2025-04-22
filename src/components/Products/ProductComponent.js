@@ -1,6 +1,7 @@
-import '../css/product.css'
-import { ImgComponent } from "./ImgComponent"
+import '../../css/product.css'
+import { ImgComponent } from "../ImgComponent"
 export const Product = (props) => {
+    console.log(props.key);
     return (
         <div className="product-card">
             <ImgComponent path={props.path} />
