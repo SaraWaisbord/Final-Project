@@ -1,35 +1,69 @@
-.product-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    text-align: center;
-    max-width: 300px;
-    margin: auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* General Styles */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
 }
 
+h1 {
+    color: #343a40;
+}
+
+/* Card Styles */
+.product-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styles */
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Description and Price */
 .product-desc {
-    font-size: 14px;
-    color: #555;
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
 }
 
 .product-price {
-    font-size: 18px;
+    color: #060606;
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #000;
 }
 
+/* Button Styles */
 .product-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-top: 8px;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333; /* Dark gray text */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .product-button:hover {
-    background-color: #0056b3;
+    background-color: #e9ecef; /* Slightly darker gray for hover */
+    color: #000; /* Black text on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    cursor: pointer;
+}
+
+.product-button:active {
+    background-color: #d6d8db; /* Even darker gray for active state */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Inset shadow for pressed effect */
 }
