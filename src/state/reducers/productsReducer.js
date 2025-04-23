@@ -1,4 +1,5 @@
-import {ADD_TO_CART,REMOVE_FROM_CART,REMOVE_TO_MY_DREAMS_LIST} from "../actionType"
+
+import {ADD_TO_CART,REMOVE_FROM_CART,REMOVE_TO_MY_DREAMS_LIST} from "../actions/actionType"
 
 
 const initialState={
@@ -7,6 +8,7 @@ const initialState={
 
 
 export const productReducer = (state = initialState,action)=>{
+    console.log(action.payload);
     switch(action.type){
         case ADD_TO_CART:
             return { ...state,  products: state.products.concat(action.payload) }

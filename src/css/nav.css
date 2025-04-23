@@ -1,0 +1,44 @@
+.tech-navbar {
+    background-color: #212529;
+    padding: 0.5rem 1rem;
+  }
+  
+  .brand-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f8f9fa;
+  }
+  
+  .nav-links .nav-link-item {
+    color: #adb5bd;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links .nav-link-item:hover {
+    color: #f8f9fa;
+  }
+  
+  .cart-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+  }
+  .cart-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .cart-icon {
+    width: 48px;
+    height: 48px;
+    filter: invert(100%);
+  }
+  
+  .cart-button:hover .cart-icon {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
