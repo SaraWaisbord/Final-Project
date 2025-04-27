@@ -1,43 +1,65 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { ImgComponent } from "../ImgComponent";
 import { addProductToCart } from "../../state/actions/action";
-export const ExtandProduct=(product)=>{
-    
-    const dispatch = useDispatch();
-    const [quantity,setQuantity]=useState(1);
+import { useParams } from "react-router-dom";
 
-    //cheks that the additional quantity is corrrect
-    const handQuantityProductChange=(e)=>{
-        console.log(quantity);
-        if(e.target.value==product.invertory)
-            setQuantity(e.target.value);
-        if (e.target.value<=0)
+export const ExtandProduct = () => {
+    const { id } = useParams(); // שליפת ה-id מתוך ה-URL
+    const product = useSelector((state) => 
+        state.products.products.find((p) => p.id == id)
+    );
+    const dispatch = useDispatch();
+    const [quantity, setQuantity] = useState(1); // סטייט לכמות המוצר
+
+    // בדיקה ועדכון של כמות המוצר
+    const handleQuantityProductChange = (e) => {
+        const value = parseInt(e.target.value, 10); // המרת הערך למספר
+        if (isNaN(value) || value <= 0) {
+            // אם הערך אינו מספר או קטן מ-1, הגדר את הכמות ל-1
             setQuantity(1);
-        else
-            setQuantity(e.target.value);
+           
+        } else if (value > product.inventory) {
+            // אם הערך גדול מהמלאי המקסימלי, הגדר את הכמות למלאי המקסימלי
+            setQuantity(product.inventory);
+        } else {
+            // אחרת, עדכן את הכמות לערך שהוזן
+            setQuantity(value);
+        }
+        product.inventory-=quantity;
+    };
+
+    // אם המוצר לא נמצא, מציגים הודעה
+    if (!product) {
+        return <div>המוצר לא נמצא.</div>;
     }
-      
+
     return (
         <div className="card product-card shadow-sm">
-            <ImgComponent path={product.path} />
+            <ImgComponent path={product.img} />
             <div className="card-body text-center">
                 <p className="product-desc">{product.shortDesc}</p>
                 <h3 className="product-price">${product.price}</h3>
                 
-               <input
-               typeof="number"
-               className="qty-product"
-               value={quantity}
-               onChange={handQuantityProductChange()}
-               />
-                <button className="product-button" 
-                onClick={()=>{(dispatch(addProductToCart({product:product,quantity:quantity})))}}>
-                add to cart
+                {/* שדה להזנת כמות */}
+                <input
+                    type="number"
+                    className="qty-product"
+                    value={quantity} // חיבור ה-value לסטייט של quantity
+                    onChange={handleQuantityProductChange} // העברת הפונקציה בצורה נכונה
+                    min="1"
+                    max={product.inventory} // מגדיר את המקסימום לפי המלאי
+                />
+                
+                {/* כפתור להוספת המוצר לעגלה */}
+                <button 
+                    className="product-button" 
+                    onClick={() => dispatch(addProductToCart({ product: product, quantity: quantity }))}>
+                    add to cart
                 </button>
+                
                 <p className="product-desc">{product.longDesc}</p>
             </div>
         </div>
     );
 };
-  

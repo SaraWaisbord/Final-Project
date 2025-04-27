@@ -1,23 +1,21 @@
 
 
 import React from 'react';
-import products from '../../data/products.json';
-import { Product } from './ProductComponent';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import '../../css/product.css';
-
+import Product from "../Products/ProductComponent"
 export const LoadProducts = () => {
-    const filteredProducts = products.filter((p) => p.price > 300); 
+    // שליפת כל המוצרים מתוך הסטייט הגלובלי
+    const producstData = useSelector((state) => state.products.products);
+
     return (
         <div className="container mt-5">
-            <h1 className="text-center mb-4">Our Products</h1>
+            <h1 className="text-center mb-4">המוצרים שלנו</h1>
             <div className="row">
-                {filteredProducts.map((p) => (
-                    <div className="col-md-4 col-sm-6 mb-4" key={p.id}>
-                        <Product 
-                            path={p.img} 
-                            shortDesc={p.description} 
-                            price={p.price}
-                        />
+                {producstData.map((product) => (
+                    <div className="col-md-4 col-sm-6 mb-4" key={product.id}>
+                        <Product id={product.id}></Product>
                     </div>
                 ))}
             </div>

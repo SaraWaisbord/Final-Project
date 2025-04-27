@@ -1,0 +1,88 @@
+
+
+
+ 
+ const dataDetails = [
+  {
+      id: 1,
+      description: "Backpack with 30L storage, waterproof material",
+      price: 59.99,
+      img: require("../assets/imgs/img_5terre_wide.jpg"),
+      category: "Backpacks",
+      longDesc: "A durable, waterproof backpack perfect for hiking and travel.",
+      inventory: 10,
+      soldOut:true,
+  },
+  {
+      id: 2,
+      description: "Sleeping bag for extreme cold weather",
+      price: 89.99,
+      img: require("../assets/imgs/img_lights_wide.jpg"),
+      category: "Camping",
+      longDesc: "Comfortable sleeping bag suited for temperatures as low as -20°C.",
+      inventory: 15,
+      soldOut:false,
+  },
+  {
+      id: 3,
+      description: "Portable water filter with 99.9% bacteria removal",
+      price: 24.99,
+      img: require("../assets/imgs/img_lights_wide.jpg"),
+      category: "Essentials",
+      longDesc: "Lightweight and portable water filter for safe drinking water anywhere.",
+      inventory: 30,
+      soldOut:false,
+  },
+  {
+      id: 4,
+      description: "Multi-tool with 12 functions, including knife and pliers",
+      price: 39.99,
+      img: require("../assets/imgs/img_snow_wide.jpg"),
+      category: "Tools",
+      longDesc: "A versatile multi-tool for any outdoor or travel needs.",
+      inventory: 20,
+      soldOut:true,
+  },
+  {
+      id: 5,
+      description: "Compact first aid kit for travel emergencies",
+      price: 19.99,
+      img: require("../assets/imgs/img_nature_wide.jpg"),
+      category: "Health",
+      longDesc: "A compact and lightweight first aid kit for travel and hiking.",
+      inventory: 25,
+      soldOut:false,
+  },
+  {
+      id: 6,
+      description: "Lightweight travel tent for 2 people",
+      price: 129.99,
+      img: require("../assets/imgs/img_lights_wide.jpg"),
+      category: "Camping",
+      longDesc: "An ultralight tent that's easy to assemble and perfect for travelers.",
+      inventory: 8,
+      soldOut:false,
+  },
+  {
+      id: 7,
+      description: "Solar-powered portable charger",
+      price: 49.99,
+      img: require("../assets/imgs/img_lights_wide.jpg"),
+      category: "Gadgets",
+      longDesc: "Portable solar charger to keep your devices powered on the go.",
+      inventory: 18,
+      soldOut:false,
+  },
+  {
+      id: 8,
+      description: "Travel pillow with memory foam",
+      price: 14.99,
+      img: require("../assets/imgs/img_lights_wide.jpg"),
+      category: "Comfort",
+      longDesc: "A comfortable memory foam pillow for long trips.",
+      inventory: 50,
+      soldOut:false,
+  },
+];
+
+export default dataDetails;

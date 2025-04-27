@@ -1,10 +1,10 @@
 
 import {createStore,combineReducers, applyMiddleware} from 'redux';
-import { productReducer } from '../reducers/productsReducer';
+import { productReducer } from '../reducers/productReducer';
 import { createStoreHook } from 'react-redux';
 
 const rootReducers = combineReducers({
-    product:productReducer,
+    products:productReducer,
 
 });
 const store  = createStore(rootReducers);
