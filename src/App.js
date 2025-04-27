@@ -7,6 +7,7 @@ import { LoadProducts } from './components/Products/ProductScreen';
 import { Home } from './screens/Home';
 import store from './state/store/store';
 import CartComponent  from './components/Cart/CartComponent';
+
 function App() {
   return (
    

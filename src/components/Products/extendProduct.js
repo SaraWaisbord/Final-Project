@@ -1,36 +1,41 @@
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import { ImgComponent } from "../ImgComponent";
 import { addProductToCart } from "../../state/actions/action";
-export const ExtandProduct=(product)=>{
-    
+import { ExtandProductView } from "./ExtandProductView";
+import productsData from '../../data/products';
+export const ExtandProduct=()=>{
     const dispatch = useDispatch();
     const [quantity,setQuantity]=useState(1);
+    const { id } = useParams();
+    console.log(parseInt(id));
+    const product = productsData.find(p => p.id === parseInt(id));
+    console.log(product);
 
-    //cheks that the additional quantity is corrrect
-    const handQuantityProductChange=(e)=>{
-        console.log(quantity);
-        if(e.target.value==product.invertory)
-            setQuantity(e.target.value);
-        if (e.target.value<=0)
-            setQuantity(1);
-        else
-            setQuantity(e.target.value);
-    }
+    // cheks that the additional quantity is corrrect
+    const handQuantityProductChange = (e) => {
+        const val = parseInt(e.target.value);
+        if (val <= 0)
+             setQuantity(1);
+        else if (val > product.inventory)
+             setQuantity(product.inventory);
+        else 
+            setQuantity(val);
+      };
       
     return (
         <div className="card product-card shadow-sm">
-            <ImgComponent path={product.path} />
+             <ExtandProductView imagArry = {product.imagesArry}/>
             <div className="card-body text-center">
                 <p className="product-desc">{product.shortDesc}</p>
                 <h3 className="product-price">${product.price}</h3>
-                
-               <input
+               {/* <input
                typeof="number"
                className="qty-product"
                value={quantity}
                onChange={handQuantityProductChange()}
-               />
+               /> */}
                 <button className="product-button" 
                 onClick={()=>{(dispatch(addProductToCart({product:product,quantity:quantity})))}}>
                 add to cart
