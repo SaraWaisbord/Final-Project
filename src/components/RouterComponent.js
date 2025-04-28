@@ -33,6 +33,8 @@ const RouterComponent = () => {
           <Route path="/products" element={<Products />} />
           <Route path="/" element={<Home />} />
           <Route path="/products/:id" element={<ExtandProduct />} />
+          <Route path="/product/:id" element={<ExtandProduct />} />
+
         </Routes>
       </Router>
     </>

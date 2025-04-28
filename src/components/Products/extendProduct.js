@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { ImgComponent } from "../ImgComponent";
 import { addProductToCart } from "../../state/actions/action";
-
+import ExtandProductView from "../Products/ExtandProductView";
 export const ExtandProduct = () => {
     const { id } = useParams(); // שליפת ה-id מתוך ה-URL
     const product = useSelector((state) => 
@@ -33,10 +33,11 @@ export const ExtandProduct = () => {
     if (!product) {
         return <div>המוצר לא נמצא.</div>;
     }
-
+    console.log(product.imgs);
+    
     return (
         <div className="card product-card shadow-sm">
-            <ImgComponent path={product.img} />
+            <ExtandProductView imagArry={product.imgs}></ExtandProductView>
             <div className="card-body text-center">
                 <p className="product-desc">{product.shortDesc}</p>
                 <h3 className="product-price">${product.price}</h3>
@@ -59,6 +60,7 @@ export const ExtandProduct = () => {
                 </button>
                 
                 <p className="product-desc">{product.longDesc}</p>
+                <p>{product.addionalData}</p>
             </div>
         </div>
     );

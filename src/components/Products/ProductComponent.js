@@ -17,7 +17,7 @@ import { useParams } from 'react-router-dom';
     return (
         <div className="card product-card shadow-sm">   
         <Link to={`/product/${product.id}`}>
-            <ImgComponent path={product.img} />
+            <ImgComponent path={product.imgs[0]} />
             </Link>
           
             <div className="card-body text-center">
