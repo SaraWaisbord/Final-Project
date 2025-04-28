@@ -3,7 +3,12 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { ImgComponent } from "../ImgComponent";
 import { addProductToCart } from "../../state/actions/action";
+<<<<<<< HEAD
 import ExtandProductView from "../Products/ExtandProductView";
+=======
+import { useParams } from "react-router-dom";
+import '../../css/extendProduct.css'
+>>>>>>> 3b3e1bcf1edfa639a2e085200a90fa8c7ca4de4b
 export const ExtandProduct = () => {
     const { id } = useParams(); // שליפת ה-id מתוך ה-URL
     const product = useSelector((state) => 

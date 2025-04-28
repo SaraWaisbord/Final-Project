@@ -21,7 +21,7 @@ import { useParams } from 'react-router-dom';
             </Link>
           
             <div className="card-body text-center">
-                <p className="product-desc">{product.shortDesc}</p>
+                <p className="product-desc">{product.description}</p>
                 <h3 className="product-price">${product.price}</h3>
                 {product.soldOut === false ?
                 ( 
