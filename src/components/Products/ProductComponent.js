@@ -5,27 +5,34 @@ import { ImgComponent } from "../ImgComponent"
 import { Link } from 'react-router-dom';
 import RouterComponent from '../RouterComponent'; 
 import { ExtandProduct } from './extendProduct';
-import { ExtandProductView } from './ExtandProductView';
-import productsData from '../../data/products';
-export const Product = ({product}) => {
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+ const Product = ({id}) => {
     const dispatch = useDispatch();
+    const product = useSelector((state) => 
+    state.products.products.find((p) => p.id ==id));
+    if (!product) {
+        return <div>המוצר לא נמצא.</div>;
+    }
     return (
-        
-        <div className="card product-card shadow-sm">
-            <Link to={`/products/${product.id}`}>   
-                <ImgComponent path={product.imagesArry[0]} />
+        <div className="card product-card shadow-sm">   
+        <Link to={`/product/${product.id}`}>
+            <ImgComponent path={product.img} />
             </Link>
           
             <div className="card-body text-center">
                 <p className="product-desc">{product.shortDesc}</p>
                 <h3 className="product-price">${product.price}</h3>
-                
-                <button className="product-button" 
-                onClick={()=>{(dispatch(addProductToCart({product:product,quantity:1})))}}>
-                <ion-icon name="add"></ion-icon>
-                </button>
+                {product.soldOut === false ?
+                ( 
+                    <button className="product-button" 
+                    onClick={()=>{(dispatch(addProductToCart({product:product,quantity:1})))}}>
+                    <ion-icon name="add"></ion-icon></button>):
+                    <p>לא קיים במלאי</p>
+                }
             </div>
            
         </div>
     );
 };
+export default Product;

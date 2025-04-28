@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { About } from '../screens/About';
 import { Products } from '../screens/Products';
 import { Home } from '../screens/Home';
+import { Product } from './Products/ProductComponent';
 import CartComponent from './Cart/CartComponent';
 import { ExtandProduct } from './Products/extendProduct';
 import '../css/nav.css';
