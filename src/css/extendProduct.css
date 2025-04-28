@@ -1,0 +1,135 @@
+/* extandProduct.css */
+
+/* מיכל הכרטיס */
+.product-card {
+    max-width: 450px;
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.02);
+  }
+  
+  /* תמונת המוצר */
+  .product-card img, 
+  .product-card .img-component {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  /* גוף הכרטיס */
+  .card-body {
+    padding: 1.5rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+  }
+  
+  /* תיאור קצר */
+  .product-desc {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+  
+  /* מחיר */
+  .product-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a9f7c; /* ירוק כהה */
+    margin-bottom: 1.2rem;
+  }
+  
+  /* שדה כמות */
+  .qty-product {
+    width: 80px;
+    padding: 0.5rem 0.75rem;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 2px solid #1a9f7c;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    outline-offset: 2px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .qty-product:focus {
+    border-color: #117a5a;
+    box-shadow: 0 0 5px rgba(17, 122, 90, 0.5);
+  }
+  
+  /* כפתור הוספה לעגלה */
+  .product-button {
+    background-color: #1a9f7c;
+    color: white;
+    border: none;
+    padding: 0.75rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(26, 159, 124, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+  
+  .product-button:hover {
+    background-color: #117a5a;
+    box-shadow: 0 7px 15px rgba(17, 122, 90, 0.7);
+  }
+  
+  /* תיאור ארוך */
+  .product-card .product-desc:last-of-type {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 0;
+    line-height: 1.5;
+    font-style: italic;
+    padding: 0 1rem;
+    max-height: 140px;
+    overflow-y: auto;
+  }
+  
+  /* גלילה לתיאור ארוך (עיצוב סרגל גלילה) */
+  .product-card .product-desc:last-of-type::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .product-card .product-desc:last-of-type::-webkit-scrollbar-thumb {
+    background-color: #1a9f7c;
+    border-radius: 10px;
+  }
+  
+  /* רספונסיביות בסיסית */
+  @media (max-width: 500px) {
+    .product-card {
+      max-width: 90%;
+      margin: 1rem auto;
+    }
+  
+    .product-card img,
+    .product-card .img-component {
+      height: 220px;
+    }
+  
+    .product-button {
+      width: 100%;
+      padding: 0.75rem;
+    }
+  }
+  
