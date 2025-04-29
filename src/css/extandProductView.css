@@ -6,35 +6,35 @@
 }
 
 .main-image img {
-  width: 100%;
-  max-width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  width: 30vw;
+  height: 40vh;
+  object-fit: contain;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
 }
 
 .thumbnails {
   display: flex;
-  flex-direction: row;
+  gap: 8px;
   justify-content: center;
-  gap: 10px;
-  overflow: hidden; /* חשוב! */
-  width: 100%;
-  max-width: 500px;
 }
 
 .thumbnail {
-  width: 115px;
-  height: 80px;
+  width: 6vw;
+  height: 8vh;
+  max-width: 80px;
+  max-height: 100px;
   object-fit: cover;
   border: 2px solid transparent;
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: transform 0.3s ease;
   flex-shrink: 0;
 }
 
 .thumbnail:hover,
 .thumbnail.active {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  border-color: #999;
 }

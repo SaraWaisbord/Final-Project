@@ -10,7 +10,6 @@ const ExtandProductView = ({ imagArry }) => {
   const handleThumbClick = (img, index) => {
     setMainImg(img);
 
-    // אם לחצו על תמונה שמחוץ לתחום התצוגה - נזיז את התחום
     if (index < startIndex || index >= startIndex + visibleCount) {
       let newStart = index - visibleCount + 1;
       if (newStart < 0) newStart = 0;

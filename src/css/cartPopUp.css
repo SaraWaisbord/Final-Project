@@ -1,10 +1,9 @@
 .cart-popup-container {
-    background-color: #fdfdfd; /* רקע לבן בהיר */
-    border: 1px solid #e0e0e0;
+    background-color: #ffffff; /* רקע לבן בהיר */
+    border: 1px solid #6c6a6a;
     border-radius: 12px;
-    padding: 20px;
-    max-width: 500px; /* חלון קטן יותר */
-    margin: 20px auto;
+    padding: 5px;
+    max-width: 420px; /* חלון קטן יותר */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,8 +12,8 @@
 .close-popup-button {
     background: none;
     border: none;
-    color: #ff6b6b;
-    font-size: 20px; /* גודל קטן יותר */
+    color: #000000;
+    font-size: 25px; /* גודל קטן יותר */
     position: absolute;
     top: 10px;
     right: 10px;
@@ -23,39 +22,37 @@
 
 .popup-title {
     text-align: center;
-    font-size: 22px; /* כותרת קטנה יותר */
+    font-size: 28px; /* כותרת קטנה יותר */
     color: #333;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
 .cart-items-list {
     display: flex;
     flex-direction: column;
-    gap: 12px; /* רווח בין פריטים */
+    gap: 5px; 
 }
 
 .cart-item-row {
     display: flex;
-    align-items: center;
+    align-items: right;
     background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-direction: row-reverse;
+    padding: 2px;
 }
 
 .cart-item-row img {
-    width: 60px; /* תמונה קטנה יותר */
+    width: 170px; /* תמונה קטנה יותר */
     height: auto;
     border-radius: 8px; /* עיגול פינות לתמונה */
-    margin-right: 12px; /* רווח בין התמונה לפרטים */
+
 }
 
 .cart-popup-icons {
     display: flex;
     justify-content: space-between;
     margin-top: 16px;
-    font-size: 20px; /* גודל קטן יותר */
+    font-size: 40px; /* גודל קטן יותר */
     color: #00796b;
 }
 
