@@ -6,7 +6,7 @@ import { About } from '../screens/About';
 import { Products } from '../screens/Products';
 import { Home } from '../screens/Home';
 import { Product } from './Products/ProductComponent';
-import CartComponent from './Cart/CartComponent';
+import CartComponentIcon  from './Cart/CartComponentIcon';
 import { ExtandProduct } from './Products/extendProduct';
 import '../css/nav.css';
 
@@ -16,6 +16,7 @@ const RouterComponent = () => {
       <Router>
         <Navbar bg="dark" variant="dark" className="tech-navbar">
           <Container>
+          
             <Navbar.Brand className="brand-logo">Travel Product</Navbar.Brand>
             <Nav className="me-auto nav-links">
               <Nav.Link as={Link} to="/" className="nav-link-item">Home</Nav.Link>
@@ -23,7 +24,8 @@ const RouterComponent = () => {
               <Nav.Link as={Link} to="/products" className="nav-link-item">Products</Nav.Link>
             </Nav>
             <div className="cart-container">
-              <CartComponent />
+            <ion-icon name="contrast-outline"></ion-icon>
+              <CartComponentIcon />
             </div>
           </Container>
         </Navbar>
@@ -34,7 +36,6 @@ const RouterComponent = () => {
           <Route path="/" element={<Home />} />
           <Route path="/products/:id" element={<ExtandProduct />} />
           <Route path="/product/:id" element={<ExtandProduct />} />
-
         </Routes>
       </Router>
     </>

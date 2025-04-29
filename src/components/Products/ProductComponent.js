@@ -1,12 +1,10 @@
 import '../../css/product.css'
 import { useDispatch} from "react-redux";
-import { addProductToCart } from '../../state/actions/action';
+import { addProductToCart, reduceFromInventory } from '../../state/actions/action';
 import { ImgComponent } from "../ImgComponent"
 import { Link } from 'react-router-dom';
-import RouterComponent from '../RouterComponent'; 
-import { ExtandProduct } from './extendProduct';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+
  const Product = ({id}) => {
     const dispatch = useDispatch();
     const product = useSelector((state) => 
@@ -26,7 +24,8 @@ import { useParams } from 'react-router-dom';
                 {product.soldOut === false ?
                 ( 
                     <button className="product-button" 
-                    onClick={()=>{(dispatch(addProductToCart({product:product,quantity:1})))}}>
+                    onClick={()=>{(dispatch(addProductToCart({product:product,quantity:1})))
+                    dispatch(reduceFromInventory({product:product,quantity:1}))}}>
                     <ion-icon name="add"></ion-icon></button>):
                     <p>לא קיים במלאי</p>
                 }

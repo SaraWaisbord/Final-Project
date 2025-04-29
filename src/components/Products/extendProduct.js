@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { ImgComponent } from "../ImgComponent";
-import { addProductToCart } from "../../state/actions/action";
+import { addProductToCart, reduceFromInventory } from "../../state/actions/action";
 import ExtandProductView from "../Products/ExtandProductView";
 import "../../css/extendProduct.css";
 
@@ -13,9 +13,19 @@ export const ExtandProduct = () => {
   );
   const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
-
+  
   const handleQuantityProductChange = (e) => {
     const value = parseInt(e.target.value, 10);
+    if (isNaN(value) || value <= 0) {
+      setQuantity(1);
+    } else if (value > product.inventory) {
+      setQuantity(product.inventory);
+    } else {
+      setQuantity(value);
+    }
+  };
+  const handleQuantityProductChange2 = (e) => {
+    const value = parseInt(e, 10);
     if (isNaN(value) || value <= 0) {
       setQuantity(1);
     } else if (value > product.inventory) {
@@ -44,17 +54,20 @@ export const ExtandProduct = () => {
               className="qty-input"
               value={quantity}
               onChange={handleQuantityProductChange}
-              min="1"
-              max={product.inventory}
+              
             />
             <p>{product.price}</p>
+            {product.soldOut === false ?
             <button
               className="product-button"
-              onClick={() =>
+              onClick={() =>{
                 dispatch(addProductToCart({ product: product, quantity: quantity }))
-              }
+                dispatch(reduceFromInventory({product:product,quantity:quantity}))
+                handleQuantityProductChange2(quantity)
+              }}
             >              הוסף לסל 
-            </button>
+            </button>: <p>לא קיים במלאי</p>
+}
           {/* </div> */}
         </div>
       </div>

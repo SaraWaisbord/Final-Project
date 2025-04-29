@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import '../../css/product.css';
 import Product from "../Products/ProductComponent"
-export const LoadProducts = () => {
+export const ProductScreen = () => {
     // שליפת כל המוצרים מתוך הסטייט הגלובלי
     const producstData = useSelector((state) => state.products.products);
 
