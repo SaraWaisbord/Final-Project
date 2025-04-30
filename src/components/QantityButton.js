@@ -2,16 +2,20 @@
 
 
 const QuantityControl = ({ quantity, maxQuantity, onIncrease, onDecrease }) => {
+
+
+
   return (
     <div className="quantity-controls">
-      <button onClick={onDecrease} disabled={quantity <= 1}>-</button>
+      <button onClick={onIncrease} disabled={quantity >= maxQuantity}>
+        +
+      </button>
       <p>{quantity}</p>
-      <button onClick={onIncrease} disabled={quantity >= maxQuantity}>+</button>
+      <button onClick={onDecrease} disabled={quantity <= 1}>
+        -
+      </button>
     </div>
   );
 };
-
-
-
 
 export default QuantityControl;

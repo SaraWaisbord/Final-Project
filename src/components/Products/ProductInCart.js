@@ -11,11 +11,9 @@ const ProductInCart = ({ id }) => {
     const quantity = useSelector((state) =>
         state.cart.products.find((p) => p.product.id === id)?.quantity || 1
       );
-      
     const product = useSelector((state) =>
         state.products.products.find((p) => p.id == id)
     );
-
     if (!product) return <div>המוצר לא נמצא.</div>;
 
     return (

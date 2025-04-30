@@ -13,21 +13,14 @@ export const cartReducer = (state = initialState,action)=>{
         case ADD_TO_CART: {
           const { product, quantity } = action.payload;
           const existingProduct = state.products.find(p => p.product.id === product.id);
-        
           if (existingProduct) {
-            return {
-              ...state,
-              products: state.products.map(p =>
-                p.product.id === product.id
+            return {...state,products: state.products.map(p =>p.product.id === product.id
                   ? { ...p, quantity: p.quantity + quantity }
                   : p
               )
             };
           } else {
-            return {
-              ...state,
-              products: [...state.products, { product, quantity }]
-            };
+            return {...state,products: [...state.products, { product, quantity }]};
           }
         }
         case "DECREASE_PRODUCT_QUANTITY": {

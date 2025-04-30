@@ -16,13 +16,15 @@ const updateInventory = (products, productId, quantityChange) => {
       }
       return product;
     });
-  };
+};
 
 export const inventoryReducer = (state = initialState, action) => {
   switch (action.type) {
     case REDUCE_FROM_INVENTORY:
-      return {...state,
-        products: updateInventory(state.products, action.payload.product.id, -action.payload.quantity)};
+      return {
+        ...state,
+        products: updateInventory(state.products, action.payload.product.id, -action.payload.quantity),
+      };
     case ADD_TO_INVENTORY:
       console.log("action.payload.quantity", action.payload.quantity);
       return {...state,products: updateInventory(state.products, action.payload.product.id, action.payload.quantity)};
