@@ -1,7 +1,7 @@
 
 import {createStore,combineReducers, applyMiddleware} from 'redux';
 import { productReducer } from '../reducers/productReducer';
-import { persistStore } from 'redux-persist';
+// import { persistStore } from 'redux-persist';
 import {cartReducer} from '../reducers/cartReducer';
 import { inventoryReducer } from '../reducers/inventoryReducer';
 const rootReducers = combineReducers({
