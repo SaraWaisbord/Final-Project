@@ -9,17 +9,14 @@ const updateInventory = (products, productId, quantityChange) => {
     return products.map((product) => {
       if (product.id === productId) {
         const updatedInventory = product.inventory + quantityChange;
+        console.log("updatedInventory:"+updatedInventory);
         return {
-          ...product,
-          inventory: updatedInventory,
-          soldOut: updatedInventory <= 0
+          ...product,inventory: updatedInventory,soldOut: updatedInventory <= 0
         };
       }
       return product;
     });
   };
-  
-  
 
 export const inventoryReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -27,8 +24,8 @@ export const inventoryReducer = (state = initialState, action) => {
       return {...state,
         products: updateInventory(state.products, action.payload.product.id, -action.payload.quantity)};
     case ADD_TO_INVENTORY:
-      return {...state,
-        products: updateInventory(state.products, action.payload.product.id, action.payload.quantity)};
+      console.log("action.payload.quantity", action.payload.quantity);
+      return {...state,products: updateInventory(state.products, action.payload.product.id, action.payload.quantity)};
     default:
       return state;
   }

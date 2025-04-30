@@ -10,8 +10,6 @@ export const cartReducer = (state = initialState,action)=>{
     console.log(action.payload);
     
     switch(action.type){
-        //גם פה - שלא יראו שוב ושוב את אותו מוצרררר הוספת שדה כמות מקווה שזה OK🤗🤗
-
         case ADD_TO_CART: {
           const { product, quantity } = action.payload;
           const existingProduct = state.products.find(p => p.product.id === product.id);
@@ -32,12 +30,23 @@ export const cartReducer = (state = initialState,action)=>{
             };
           }
         }
-          
+        case "DECREASE_PRODUCT_QUANTITY": {
+          const { product, quantity } = action.payload;
+          return {...state,products: state.products.map(p =>p.product.id === product.id
+                  ? { ...p, quantity: p.quantity - quantity }
+                  : p
+              )
+              .filter(p => p.quantity > 0) 
+          };
+        }
           
         case REMOVE_FROM_CART:
-            return {...state, products: state.products.filter((product) => product.id != action.payload.id)}
+          return {...state, products: state.products.filter((p) => p.product.id !== action.payload.id
+)
+          };
+      
         case REMOVE_TO_MY_DREAMS_LIST:
-            return {...state, products: state.products.filter((product) => product.id != action.payload.id)}
+            return {...state, products: state.products.filter((p) => p.product.id !== action.payload.id)}
         default:
             return state;
     }

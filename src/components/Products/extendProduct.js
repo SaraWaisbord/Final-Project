@@ -38,7 +38,10 @@ export const ExtandProduct = () => {
         </div>
         <div className="product-info">
           <h2 className="product-title">{product.description}</h2>
-          <QuantityControl product={product}maxQuantity={product.inventory}/>
+          <QuantityControl quantity={quantity}
+            maxQuantity={product.inventory}
+            onIncrease={() => setQuantity(q => Math.min(q + 1, product.inventory))}
+            onDecrease={() => setQuantity(q => Math.max(q - 1, 1))}/>
 
             <p>{product.price}</p>
             {product.soldOut === false ?
@@ -47,7 +50,7 @@ export const ExtandProduct = () => {
               onClick={() =>{
                 dispatch(addProductToCart({ product: product, quantity: quantity }))
                 dispatch(reduceFromInventory({product:product,quantity:quantity}))
-                handleQuantityProductChange2(quantity)
+                setQuantity(1);
               }}
             > הוסף לסל 
             </button>: <p>לא קיים במלאי</p>

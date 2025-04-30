@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { removeProductFromCart, reduceFromInventory, addToInventory,addProductToCart } from '../../state/actions/action';
+import { removeProductFromCart, reduceFromInventory, addToInventory,addProductToCart ,decreaseProductQuantity} from '../../state/actions/action';
 import { ImgComponent } from "../ImgComponent";
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
@@ -35,21 +35,21 @@ const ProductInCart = ({ id }) => {
                     <h3 className="product-price">${product.price}</h3>
                     <div className="quantity-controls">
                     <QuantityControl
-                        quantity={quantity}
-                        maxQuantity={product.inventory}
-                        onIncrease={() => {
-                        dispatch(addProductToCart({ product, quantity: 1 }));
-                        dispatch(reduceFromInventory({ product, quantity: 1 }));}}
-                        onDecrease={() => {
-                            if (quantity === 1) {
-                                dispatch(removeProductFromCart(product));
-                            } else {
-                                dispatch(addToInventory({ product, quantity: 1 })); 
-                            }
-                        }}
-                    />
-                    </div>
+  quantity={quantity}
+  maxQuantity={product.inventory}
+  onIncrease={() => {
+    if (product.inventory > 0) {
+      dispatch(addProductToCart({ product, quantity: 1 }));
+      dispatch(reduceFromInventory({ product, quantity: 1 }));
+    }
+  }}
+  onDecrease={() => {
+
+      dispatch(decreaseProductQuantity({ product, quantity: 1 } ));
+      dispatch(addToInventory({ product, quantity: 1 }));
+  }}
   
+                /></div>
                 <div className="product-image-cart">
                     <Link to={`/product/${product.id}`}>
                         <ImgComponent path={product.imgs[0]}/>
