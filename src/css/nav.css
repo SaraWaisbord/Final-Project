@@ -1,4 +1,4 @@
-.tech-navbar {
+/* .tech-navbar {
     background-color: #212529;
     padding: 0.5rem 1rem;
   }
@@ -41,4 +41,225 @@
   .cart-button:hover .cart-icon {
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
+  } */
+   /* צבעים ראשיים */
+:root {
+  --color-bg: #f9faf7;       /* רקע כללי – בהיר ונעים */
+  --color-primary: #e63946;  /* אדום חזק ונעים */
+  --color-primary-light: #f1a1a8; /* אדום בהיר יותר */
+  --color-text-dark: #1d1d1d;     /* טקסט כהה לקריאות */
+  --color-text-light: #ffffff;    /* טקסט על רקע כהה */
+  --color-nav-bg: #ffffff;         /* רקע הניווט */
+  --color-nav-hover: #fce8e9;      /* רקע כפתור ניווט בהובר */
+  --color-border: #e63946aa;       /* גבול אדום שקוף */
+  --shadow: rgba(230, 57, 70, 0.15);
+}
+
+/* סגנון כללי לbody */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text-dark);
+}
+
+/* נביגיישן בר - עיצוב כללי */
+.tech-navbar {
+  background-color: var(--color-nav-bg) !important; /* לבן */
+  box-shadow: 0 2px 8px var(--shadow);
+  padding: 0.8rem 1.3rem;
+  border-bottom: 2px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* לוגו */
+.brand-logo {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  user-select: none;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 5px var(--color-primary-light);
+  transition: color 0.3s ease;
+}
+
+.brand-logo:hover {
+  color: var(--color-primary-light);
+}
+
+/* קישורי ניווט */
+.nav-links {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.nav-link-item {
+  color: var(--color-text-dark);
+  margin-right: 1.25rem;
+  position: relative;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+/* הדגשה ותחתית אדומה בהובר */
+.nav-link-item::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background-color: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link-item:hover,
+.nav-link-item.active {
+  color: var(--color-primary);
+}
+
+.nav-link-item:hover::after,
+.nav-link-item.active::after {
+  width: 100%;
+}
+
+/* סל הקניות */
+.cart-container {
+  position: relative;
+  cursor: pointer;
+  color: var(--color-primary);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.3s ease;
+}
+
+.cart-container:hover {
+  color: var(--color-primary-light);
+  text-shadow: 0 0 8px var(--color-primary-light);
+}
+
+/* אייקון סל קניות - אם יש לך אייקון svg או ion-icon */
+.cart-container ion-icon {
+  font-size: 1.8rem;
+  vertical-align: middle;
+}
+
+/* עיצוב תגית מספר פריטים בסל */
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0 6px;
+  border-radius: 12px;
+  box-shadow: 0 0 6px var(--color-primary-light);
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+  .nav-links {
+    font-size: 0.9rem;
   }
+
+  .nav-link-item {
+    margin-right: 0.75rem;
+  }
+
+  .brand-logo {
+    font-size: 1.3rem;
+  }
+}
+
+/* אייקונים קטנים ליד קישורים */
+/* אפשר להוסיף אייקון מתאים עם before content */
+/* לדוגמה אייקון בית ליד Home */
+.nav-link-item.home::before {
+  content: url("data:image/svg+xml;utf8,<svg fill='%23e63946' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z'/></svg>");
+  margin-right: 6px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* אייקון מידע ליד About */
+.nav-link-item.about::before {
+  content: url("data:image/svg+xml;utf8,<svg fill='%23e63946' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><circle cx='12' cy='12' r='10' stroke='%23e63946' stroke-width='2' fill='none'/><line x1='12' y1='8' x2='12' y2='12' stroke='%23e63946' stroke-width='2'/><circle cx='12' cy='16' r='1' fill='%23e63946'/></svg>");
+  margin-right: 6px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* אייקון תיק טיולים ליד Products */
+.nav-link-item.products::before {
+  content: url("data:image/svg+xml;utf8,<svg fill='%23e63946' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M6 2h12v2H6V2zm2 5h8v12H8V7zm-3 0v12h2V7H5zm12 0v12h2V7h-2z'/></svg>");
+  margin-right: 6px;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* nav.css או product.css (תבחר איפה מתאים יותר) */
+.cart-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-button:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* אפקט ריחוף עדין */
+  border-radius: 4px;
+}
+
+.cart-icon {
+  width: 24px;  /* גודל האייקון */
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+/* מיקום סטיקי בפינה ימנית עליונה */
+.sticky-cart {
+  position: sticky;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* אפקט ריחוף להדגשה */
+.sticky-cart:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.cart-icon {
+  width: 36px;  /* אייקון קצת יותר גדול */
+  height: 36px;
+  margin-right: 12px;
+  object-fit: contain;
+  display: block;
+}
+
+.cart-text {
+  font-weight: 700;
+  font-size: 18px;
+  color: #222;
+  user-select: none; /* למנוע סימון טקסט במקרה של הקלקה */
+}
