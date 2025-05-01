@@ -8,8 +8,7 @@ const Product = ({ id }) => {
   const dispatch = useDispatch();
   const product = useSelector((state) =>
     state.inventory.products.find((p) => p.id == id)
-  );
-
+  ); 
   if (!product) {
     return <div>המוצר לא נמצא.</div>;
   }

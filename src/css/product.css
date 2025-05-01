@@ -17,13 +17,7 @@
     justify-content: center;
     padding: 10px;
   }
-  
-  .product-img {
-    width: 40%;
-    height: 70%;
-    object-fit: contain;
-    max-height: 100%;
-  }
+
   
   .product-bottom {
     height: 30%;

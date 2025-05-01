@@ -1,4 +1,4 @@
-import dataDetails from "../../data/products";
+import dataDetails from "../../data/products.js";
 import { REDUCE_FROM_INVENTORY, ADD_TO_INVENTORY } from "../actions/actionType";
 
 const initialState = {

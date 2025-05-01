@@ -5,7 +5,8 @@ import Product from "../Products/ProductComponent";
 
 export const ProductScreen = () => {
   const producstData = useSelector((state) => state.products.products);
-
+  console.log(producstData);
+  
   return (
     <div className="product-page-container">
       <h1 className="product-page-title">המוצרים שלנו</h1>
