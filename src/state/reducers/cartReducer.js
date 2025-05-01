@@ -23,10 +23,23 @@ export const cartReducer = (state = initialState,action)=>{
             return {...state,products: [...state.products, { product, quantity }]};
           }
         }
+        case "DECREASE_PRODUCT_QUANTITY": {
+          const { product, quantity } = action.payload;
+          return {...state,products: state.products.map(p =>p.product.id === product.id
+                  ? { ...p, quantity: p.quantity - quantity }
+                  : p
+              )
+              .filter(p => p.quantity > 0) 
+          };
+        }
+          
         case REMOVE_FROM_CART:
-            return {...state, products: state.products.filter((product) => product.id != action.payload.id)}
+          return {...state, products: state.products.filter((p) => p.product.id !== action.payload.id
+)
+          };
+      
         case REMOVE_TO_MY_DREAMS_LIST:
-            return {...state, products: state.products.filter((product) => product.id != action.payload.id)}
+            return {...state, products: state.products.filter((p) => p.product.id !== action.payload.id)}
         default:
             return state;
     }

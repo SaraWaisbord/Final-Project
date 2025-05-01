@@ -43,3 +43,15 @@ const Product = ({ id }) => {
 };
 
 export default Product;
+
+
+
+
+
+
+
+
+
+
+
+
