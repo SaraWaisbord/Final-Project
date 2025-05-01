@@ -17,46 +17,40 @@ const ProductInCart = ({ id }) => {
     if (!product) return <div>המוצר לא נמצא.</div>;
 
     return (
-        <div className="product-in-cart-container">
-            <button
-                className="close-button"
+        <div className="product-content">
+            <button className="close-button"
                 onClick={() => {
                     dispatch(removeProductFromCart(product));
                     dispatch(addToInventory({ product, quantity }));
-                }}
-            >
+                }}>
                 <ion-icon name="close-outline"></ion-icon>
             </button>
-            <div className="product-content">
-                <div className="product-details">
-                <p className="product-desc-cart">{product.description}</p>
-                    <h3 className="product-price">${product.price}</h3>
-                    <div className="quantity-controls">
-                    <QuantityControl
-  quantity={quantity}
-  maxQuantity={product.inventory}
-  onIncrease={() => {
-    if (product.inventory > 0) {
-      dispatch(addProductToCart({ product, quantity: 1 }));
-      dispatch(reduceFromInventory({ product, quantity: 1 }));
-    }
-  }}
-  onDecrease={() => {
 
-      dispatch(decreaseProductQuantity({ product, quantity: 1 } ));
-      dispatch(addToInventory({ product, quantity: 1 }));
-  }}
-  
-                /></div>
-                <div className="product-image-cart">
-                    <Link to={`/product/${product.id}`}>
-                        <ImgComponent path={product.imgs[0]}/>
-                    </Link>
-                </div>
+            <Link to={`/product/${product.id}`} >
+                <ImgComponent path={product.imgs[0]} className="product-image-cart"/>
+            </Link>
+        <div className="product-details">
+            <p className="product-desc-cart">{product.description}</p>
+            <h3 className="product-price">${product.price}</h3>
+            <div className="quantity-controls">
+                <QuantityControl
+                    quantity={quantity}
+                    maxQuantity={product.inventory}
+                    onIncrease={() => {
+                        if (product.inventory > 0) {
+                            dispatch(addProductToCart({ product, quantity: 1 }));
+                            dispatch(reduceFromInventory({ product, quantity: 1 }));
+                        }
+                    }}
+                    onDecrease={() => {
+                        dispatch(decreaseProductQuantity({ product, quantity: 1 }));
+                        dispatch(addToInventory({ product, quantity: 1 }));
+                    }}
+                />
             </div>
         </div>
-        </div>
-    );
+    </div>
+    );    
 };
 
 export default ProductInCart;

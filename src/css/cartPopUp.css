@@ -41,13 +41,6 @@
     padding: 2px;
 }
 
-.cart-item-row img {
-    width: 170px; /* תמונה קטנה יותר */
-    height: auto;
-    border-radius: 8px; /* עיגול פינות לתמונה */
-
-}
-
 .cart-popup-icons {
     display: flex;
     justify-content: space-between;

@@ -1,0 +1,47 @@
+.home{
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 1200px; /* מאפשר גודל מקסימלי לתוכן */
+    margin: 0 auto; /* מרכז את התוכן במסך */
+}
+.full-width-image-wrapper {
+    width: 100vw; /* רוחב מסך מלא */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+  }
+  
+  .home-header-img {
+    width: 100%;
+    max-height: 400px; /* במקום 400px */
+    object-fit: cover;
+    display: block;
+  }
+  
+  
+.productPage{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+}
+.brandCarousel{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.ourbrands{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+.home-helping-img{
+    width: 100%;
+    max-height: 70px; /* במקום 400px */
+    object-fit: cover;
+    display: block;
+    margin-bottom: -20px;
+    margin-top: -20px;
+}

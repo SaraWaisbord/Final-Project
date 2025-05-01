@@ -2,7 +2,7 @@ import ProductInCart from '../Products/ProductInCart';
 import { useSelector } from 'react-redux';
 import '../../css/cartPopUp.css';
 
-export const CartComponentPopUp = () => {
+const CartComponentPopUp = () => {
     const producstData = useSelector((state) => state.cart.products);
     console.log(producstData);
 
@@ -27,4 +27,4 @@ export const CartComponentPopUp = () => {
             </div>
         </>
     );
-};
+};export default CartComponentPopUp;

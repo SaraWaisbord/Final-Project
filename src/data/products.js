@@ -350,7 +350,22 @@ const dataDetails = [
     longDesc: "A comfortable memory foam pillow for long trips.",
     inventory: 50,
     soldOut:false,
-},{
+},
+{
+  id: 6757,
+  description: "סט מזוודות נוח ושימושי",
+  price: 1299.9,
+  imgs: [require("../assets/imgs/Travel bags/60145_100420241241131_large.jpg"),
+    require("../assets/imgs/Travel bags/60148_02122024185447_large.jpg"),
+    require("../assets/imgs/Travel bags/60149_100420241241141_large.jpg"),
+    require("../assets/imgs/Travel bags/60150_100420241241151_large.jpg"),
+  ],
+  category: "אוהלים",
+  longDesc: "אוהל בן רגע לשש אנשים wildact",
+  inventory: 10,
+  soldOut:false,
+}
+,{
     id: 23,
     description: "שק שינה",
     price:219,
