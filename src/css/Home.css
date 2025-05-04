@@ -3,30 +3,55 @@
     background-color: rgb(255, 255, 255);
 }
 
-.home{
-    margin-left: 10px;
-    margin-right: 10px;
-    max-width: 1200px; /* מאפשר גודל מקסימלי לתוכן */
-    margin: 0 auto; /* מרכז את התוכן במסך */
-}
-.full-width-image-wrapper {
-    width: 100vw; /* רוחב מסך מלא */
+  .full-width-image-wrapper {
+    width: 99vw; 
     position: relative;
     left: 50%;
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
     overflow: hidden;
+    z-index: 1; 
   }
+  
+ 
   
   .home-header-img {
     width: 100%;
-    max-height: 400px; /* במקום 400px */
+    max-height: 400px;
     object-fit: cover;
     display: block;
+    margin: 0 auto; /* מרכז את התמונה */
+    z-index: 1; /* מוודא שהתמונה מתחת לכפתור */
+    position: relative; /* מאפשר למקם את הכפתור יחסית לתמונה */
+  }
+  
+  .home-header-btn-categories {
+    position: absolute;
+    top: 69%;
+    right: 137px;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: #de3c3c; /* רקע לבן שקוף */
+    color: white;
+    border: none;
+    padding: 18px 60px;
+    font-size: 1.5rem;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: large;
   }
   
   
+  
+.home{
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 1200px; /* מאפשר גודל מקסימלי לתוכן */
+    margin: 0 auto; /* מרכז את התוכן במסך */
+}
+
+
 .productPage{
     margin-top: 10px;
     margin-bottom: 20px;

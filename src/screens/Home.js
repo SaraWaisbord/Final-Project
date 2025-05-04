@@ -12,17 +12,13 @@ export const Home = ()=>{
         <div className="home-container">
         <div className="full-width-image-wrapper">
         <ImgComponent path={b} className="home-header-img" />
+        <button className='home-header-btn-categories'>לקטגוריות</button>
       </div>
         <div className="home"> 
-                {/* <FontAwesomeIcon icon="fa-light fa-cart-shopping" /> */}
-                {/* <CartComponentPopUp></CartComponentPopUp> */}
-                {/* <RouterComponent></RouterComponent> */}
               <ProductPage className='productPage'></ProductPage>
               <BrandCarousel className='brandCarousel'></BrandCarousel>
               <hr></hr>
-              
         </div>
-
         <ChosenCategory></ChosenCategory>
         <div className="full-width-image-wrapper">
         <ImgComponent path={a} className="home-helping-img" />

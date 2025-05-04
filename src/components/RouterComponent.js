@@ -30,7 +30,9 @@ const RouterComponent = () => {
             </Nav>
             <div className="cart-container">
             <ion-icon name="contrast-outline" ></ion-icon>
+            <Link to={`/cart`}>
               <CartComponentIcon />
+              </Link>
             </div>
           </Container>
         </Navbar>

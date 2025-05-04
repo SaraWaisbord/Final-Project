@@ -15,7 +15,7 @@ const FeaturedProduct = ({ product }) => {
   return (
     <div className="featured-product-card">
       <div className="sale-tag">מבצע</div>
-      {discount && <p className="discount-badge-featured" >עד {discount}% הנחה</p>}
+      {discount && <p className="discount-badge-featured" >{discount}% הנחה</p>}
       <Link to={`/product/${product.id}`}>
       <ImgComponent path={product.imgs[0]} className="product-img-featured"/>
       </Link>

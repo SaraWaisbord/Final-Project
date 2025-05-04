@@ -1,52 +1,75 @@
 .footer {
-    /* position: sticky; */
-    bottom: 0;
-    width: 100%;
-    background: linear-gradient(135deg, #FCE5E3, #F8C9C5);
-    color: #9B1C1C;
-    padding: 8px 12px;
-    box-shadow: 0 -2px 6px rgba(203, 67, 53, 0.25);
-    font-family: 'Assistant', sans-serif;
-    font-size: 12px;
-    direction: rtl;
-    z-index: 100;
-  }
-  
-  .footer-content {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    align-items: flex-start;
-  }
-  
-  .footer-nav {
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-    flex-wrap: nowrap;
-  }
-  
-  .footer-nav a {
-    color: #B22222;
-    font-weight: 600;
-    font-size: 12px;
-    text-decoration: none;
-    padding: 4px 6px;
-    border-radius: 3px;
-    transition: background-color 0.2s ease, color 0.2s ease;
-  }
-  
-  .footer-nav a:hover {
-    background-color: #F4A9A2;
-    color: #7B1A1A;
-  }
-  
-  .footer-copy {
-    font-size: 11px;
-    opacity: 0.7;
-    user-select: none;
-    white-space: nowrap;
-  }
-  
+  background-color: #f8f9fa;
+  padding: 30px 20px;
+  direction: rtl;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+
+.footer-category {
+  font-weight: 600;
+  font-size: 16px;
+  color: #ef0404;
+  margin-bottom: 10px;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.footer-list li {
+  text-decoration: none;
+  color: #444;
+  transition: all 0.3s ease;
+  margin-bottom: 8px;
+}
+
+.footer-list li:hover {
+  border-bottom: 1px solid #41a28d;
+  color: #000;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.footer-socials a {
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #9ad167;
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  margin-top: 20px;
+}

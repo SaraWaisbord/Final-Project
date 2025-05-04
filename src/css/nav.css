@@ -226,6 +226,11 @@ body {
   object-fit: contain;
   display: block;
 }
+.cart-container a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* מיקום סטיקי בפינה ימנית עליונה */
 .sticky-cart {
   position: sticky;

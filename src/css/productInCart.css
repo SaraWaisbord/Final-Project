@@ -1,61 +1,55 @@
-.product-in-cart-container {
-    display: flex;
-    flex-direction:  row-reverse;
-    align-items: flex-end;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 100px;
-    width: 100%;
-    background-color: #ffffff; /* רקע לבן */
-}
-
-.close-button {
-    background: none;
-    border: none;
-    color: #ff6b6b;
-    font-size: 18px;
-    align-self: flex-start;
-    cursor: pointer;
-}
-
 .product-content {
-    display: flex;
-    flex-direction: row-reverse; /* כדי שהתמונה תהיה מימין והטקסט משמאל */
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 90px 1fr auto; /* תמונה, טקסט, כפתורים */
     gap: 16px;
+    align-items: center;
+    padding: 12px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    direction: rtl;
 }
-
+.close-button {
+    cursor: pointer;
+    color: #e53935;
+    border: none;
+    background: none;
+}
 
 .product-image-cart {
-    width: 3.5vw;
-    height: 7vh;
-    border-radius: 6px;
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
 .product-details {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    gap: 6px;
+    gap: 4px;
+    font-family: 'Assistant', sans-serif;
 }
 
 .product-desc-cart {
-    font-size: 15px;
+    font-size: 14px;
     color: #333;
-}
-
-.product-price {
-    color: #ff6b6b;
-    font-size: 19px;
-    font-weight: bold;
     margin: 0;
 }
 
-.quantity-controls {
+.product-price {
+    font-size: 16px;
+    color: #e53935;
+    font-weight: bold;
+}
+
+.product-total {
+    font-size: 13px;
+    color: #666;
+    margin-top: 2px;
+}
+.product-quantity {
     display: flex;
     align-items: center;
-    height: 40px;
-    width: 120px;
+    gap: 8px;
 }
