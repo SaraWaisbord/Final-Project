@@ -6,11 +6,16 @@ import { About } from '../screens/About';
 import { Products } from '../screens/Products';
 import { Home } from '../screens/Home';
 import { Product } from './Products/ProductComponent';
+import CheckoutComponent from './Cart/CheckoutComponent';
 import CartComponentIcon  from './Cart/CartComponentIcon';
 import { ExtandProduct } from './Products/extendProduct';
+import CartComponent from '../components/Cart/CartComponent'
 import '../css/nav.css';
-
+import { useContext } from 'react';
+import ThemeContext from './ThemeContext';
 const RouterComponent = () => {
+  const theme=useContext(ThemeContext);
+  const classNameTheme='form-'+theme;
   return (
     <>
       <Router>
@@ -24,7 +29,7 @@ const RouterComponent = () => {
               <Nav.Link as={Link} to="/products" className="nav-link-item">Products</Nav.Link>
             </Nav>
             <div className="cart-container">
-            <ion-icon name="contrast-outline"></ion-icon>
+            <ion-icon name="contrast-outline" ></ion-icon>
               <CartComponentIcon />
             </div>
           </Container>
@@ -35,6 +40,8 @@ const RouterComponent = () => {
           <Route path="/products" element={<Products />} />
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<ExtandProduct />} />
+          <Route path="/cart" element={<CartComponent />} />
+          <Route path="/checkout" element={<CheckoutComponent />} />
         </Routes>
       </Router>
     </>

@@ -1,10 +1,10 @@
 import ProductInCart from '../Products/ProductInCart';
 import { useSelector } from 'react-redux';
 import '../../css/cartPopUp.css';
+import { Link } from 'react-router-dom';
 
 const CartComponentPopUp = () => {
     const producstData = useSelector((state) => state.cart.products);
-    console.log(producstData);
 
     return (
         <>
@@ -22,7 +22,8 @@ const CartComponentPopUp = () => {
                 </div>
                 <div className="cart-popup-icons">
                     <ion-icon name="card-outline"></ion-icon>
-                    <ion-icon name="cart-outline"></ion-icon>
+                    <Link to={`/cart`}>
+                    <ion-icon name="cart-outline"></ion-icon></Link>
                 </div>
             </div>
         </>

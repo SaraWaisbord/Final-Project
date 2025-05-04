@@ -10,7 +10,7 @@ import FooterComponent from './components/Footer';
 function App() {
   return (
    
-      <>
+<>
       <Provider store={store}>
         <RouterComponent></RouterComponent>
        <FooterComponent></FooterComponent>
