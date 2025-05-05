@@ -13,13 +13,6 @@ export const ExtandProduct = () => {
     state.inventory.products.find((p) => p.id == id)
   );
   const [quantity, setQuantity] = useState(1);
-  const handleAddToCart = () => {
-    if (quantity > 0 && quantity <= product.inventory) {
-      dispatch(addProductToCart({ product: product, quantity: quantity }));
-      dispatch(reduceFromInventory({ product: product, quantity: quantity }));
-      setQuantity(1);
-    }
-  };
 
   if (!product) {
     return <div>המוצר לא נמצא.</div>;

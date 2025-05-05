@@ -1,0 +1,9 @@
+/* Layout.css */
+
+/* עוטף את התוכן עם שוליים מצדדים */
+.layout-content {
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 1200px; /* מאפשר גודל מקסימלי לתוכן */
+    margin: 0 auto; /* מרכז את התוכן במסך */
+  }

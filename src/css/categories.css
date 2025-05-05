@@ -1,0 +1,47 @@
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* רווח בין כרטיסים */
+    justify-content: center;
+    padding: 20px 0;
+  }
+  .category-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #db4e4e;
+  }
+  .category-card {
+    width: 280px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    padding: 12px;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .category-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .category-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .category-name {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    font-weight: 600;
+  }
+  
+  .category-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 6px;
+  }
+  

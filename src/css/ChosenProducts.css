@@ -1,0 +1,70 @@
+.product-page-chosen- {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;  /* למנוע גלישה מחוץ לאזור הקרוסלה */
+  width: 100%;
+  height: 400px;  /* הגדרת גובה קבוע לקרוסלה */
+}
+.product-hot-title{
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #db4e4e;
+}
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  height: 100%;  /* להבטיח שכל סלייד יתפוס את הגובה המלא */
+}
+
+.slick-track {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.slick-list {
+  overflow: hidden;
+  height: 100%;  /* לא לאפשר גלילת יתר */
+}
+
+.slick-dots {
+  bottom: 20px; /* המרחק בין העיגולים לתמונה */
+}
+
+/* לוודא שהתמונות לא מתפשטות יותר מדי */
+.slick-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* התמונה תתמלא בגבולות הסלייד מבלי לעיוות */
+}
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 2rem;
+  color: #333;
+}
+
+.carousel-button:first-of-type {
+  left: -40px; 
+}
+
+.carousel-button:last-of-type {
+  right: -40px;
+}

@@ -1,76 +1,57 @@
-.product-in-cart-container {
-    display: flex;
-    flex-direction: column;
-    /* padding: 2px 0; */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.close-button {
-    background: none;
-    border: none;
-    color: #ff6b6b;
-    font-size: 18px;
-    align-self: flex-end;
-    cursor: pointer;
-    margin-bottom: 4px;
-}
-
 .product-content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 90px 1fr auto; /* תמונה, טקסט, כפתורים */
+    gap: 16px;
     align-items: center;
-    justify-content: space-between;
-    width: 20vw;
+    padding: 12px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    direction: rtl;
+}
+/* לטפל בו סופיתתתת */
+.close-button {
+    cursor: pointer;
+    color: #e53935;
+    border: none;
+    
+    background: none;
 }
 
-.product-image img,
-.product-image .img-component {
-    width: 45vw;
-    height: 50vh;
-    border-radius: 6px;
+.product-image-cart {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
 .product-details {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    /* margin-right: 5px; */
+    justify-content: center;
+    gap: 4px;
+    font-family: 'Assistant', sans-serif;
 }
 
-.product-details .product-desc-cart{
-    font-size:15px;
+.product-desc-cart {
+    font-size: 14px;
     color: #333;
+    margin: 0;
 }
 
 .product-price {
-    color: #ff6b6b;
-    font-size: 19px;
+    font-size: 16px;
+    color: #e53935;
     font-weight: bold;
-    margin: 0 0 8px 0;
 }
 
-.quantity-controls {
+.product-total {
+    font-size: 13px;
+    color: #666;
+    margin-top: 2px;
+}
+.product-quantity {
     display: flex;
     align-items: center;
-    gap: 6px;
-}
-
-.product-button {
-    background-color: transparent;
-    border: 1px solid #ccc;
-    color: #333;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.product-button:hover {
-    background-color: #f0f0f0;
-}
-
-.quantity {
-    font-size: 15px;
-    font-weight: bold;
-    color: #333;
+    gap: 8px;
 }

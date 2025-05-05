@@ -5,7 +5,6 @@ const initialState={
 }
 
 export const productReducer = (state = initialState,action)=>{
-    console.log(action.payload);
     switch(action.type){
         default:
             return state;

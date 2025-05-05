@@ -1,10 +1,6 @@
-
-
-
+import '../css/QtnButton.css'
 const QuantityControl = ({ quantity, maxQuantity, onIncrease, onDecrease }) => {
-
-
-
+  console.log('QuantityControl render');
   return (
     <div className="quantity-controls">
       <button onClick={onIncrease} disabled={quantity >= maxQuantity}>
@@ -17,5 +13,4 @@ const QuantityControl = ({ quantity, maxQuantity, onIncrease, onDecrease }) => {
     </div>
   );
 };
-
 export default QuantityControl;

@@ -1,19 +1,29 @@
-
-import { CartComponentPopUp } from '../components/Cart/CartComponentPopUp';
-import { useSelector } from 'react-redux';
-import ProductPage from '../components/ChosenProducts';
-import img from '../../src/assets/img2/imgCamping.jpg';
-import { ImgComponent } from '../components/ImgComponent';
+import CartComponentPopUp from '../components/Cart/CartComponentPopUp.js';
+import ProductPage from '../components/Home/ChosenProducts.js';
+import { BrandCarousel } from '../components/Home/BrandCarousel.js';
+import '../css/Home.css'
+import { ImgComponent } from '../components/ImgComponent.js';
+import b from '../assets/img2/Homme.png'
+import a from '../assets/img2/shadow.png'
+import { ChosenCategory } from '../components/Home/ChosenCategory.js';
 export const Home = ()=>{
+    
     return (
-        <> 
-                <h1>Hi welcome to the Home Page.</h1>
-                {/* <FontAwesomeIcon icon="fa-light fa-cart-shopping" /> */}
-                <CartComponentPopUp></CartComponentPopUp>
-                {/* <RouterComponent></RouterComponent> */}
-                <ImgComponent path={img} className="product-img" />
-              <ProductPage></ProductPage>
-        </>
+        <div className="home-container">
+        <div className="full-width-image-wrapper">
+        <ImgComponent path={b} className="home-header-img" />
+        <button className='home-header-btn-categories'>לקטגוריות</button>
+      </div>
+        <div className="home"> 
+              <ProductPage className='productPage'></ProductPage>
+              <BrandCarousel className='brandCarousel'></BrandCarousel>
+              <hr></hr>
+        </div>
+        <ChosenCategory></ChosenCategory>
+        <div className="full-width-image-wrapper">
+        <ImgComponent path={a} className="home-helping-img" />
+      </div>
+        </div>
 
     );
 }
