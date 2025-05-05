@@ -6,6 +6,49 @@
   height: 40vmin;
   pointer-events: none;
 }
+.app.light {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+.app.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+
+body, .tech-navbar, .nav-links, .nav-link-item {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+.nav-link-item:hover {
+  opacity: 0.7;
+}
+
+/* ערכות נושא מבוססות מחלקות */
+.app.light {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+.app.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+
+/* כל הגוף מקבל את הצבעים */
+.app {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh; /* כדי שהרקע יכסה את כל הדף */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* דוגמא: כפתורים, לינקים */
+a, .nav-link-item, button {
+  color: var(--text-color) !important;
+  background-color: transparent;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
