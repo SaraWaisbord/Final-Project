@@ -5,26 +5,38 @@ const categories = [
 
     {
         id: 1,
-        name: "אוהלים",
+        name: "tents",
         image: require("../assets/camping/tent/1.jpg"),
         description: "אוהלים איכותיים לכל סוגי הקמפינג והטיולים.",
 
     },
     {
         id: 2,
-        name: "שקי שינה",
+        name: "sleepingBags",
         image: require("../assets/camping/sleepingBag/1.jpg"),
         description: "שקי שינה נוחים ואיכותיים לכל עונות השנה.",
     },
     {
         id: 3,
-        name: "תיקים",
+        name: "travelBags",
         image: require("../assets/camping/bags/1.jpg"),
         description: "תיקים איכותיים לטיולים קצרים וארוכים.",
     },
     {
         id: 4,
-        name: "ריהוט חוץ",
+        name: "outdoorFurniture",
+        image: require("../assets/camping/OutdoorFurniture/1.jpg"),
+        description: "ריהוט חוץ נוח ואיכותי לכל סוגי הקמפינג.",
+    },
+    {
+        id: 5,
+        name: "shoes",
+        image: require("../assets/camping/OutdoorFurniture/1.jpg"),
+        description: "ריהוט חוץ נוח ואיכותי לכל סוגי הקמפינג.",
+    },
+    {
+        id: 6,
+        name: "hammocks",
         image: require("../assets/camping/OutdoorFurniture/1.jpg"),
         description: "ריהוט חוץ נוח ואיכותי לכל סוגי הקמפינג.",
     },

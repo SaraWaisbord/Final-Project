@@ -10,7 +10,7 @@ import CheckoutComponent from './Cart/CheckoutComponent';
 import CartComponentIcon from './Cart/CartComponentIcon';
 import CartComponent from './Cart/CartComponent';
 import '../css/nav.css';
-
+import CategoriesComponent from './CategoriesComponent';
 const RouterComponent = ({ toggleTheme }) => {
   return (
     <Router>
@@ -20,7 +20,7 @@ const RouterComponent = ({ toggleTheme }) => {
           <Nav className="me-auto nav-links">
           <Nav.Link as={Link} to="/" className="nav-link-item home">Home</Nav.Link>
           <Nav.Link as={Link} to="/about" className="nav-link-item about">About</Nav.Link>
-          <Nav.Link as={Link} to="/products" className="nav-link-item products">Products</Nav.Link>
+          <Nav.Link as={Link} to="/categories" className="nav-link-item products">Products</Nav.Link>
 
           </Nav>
           <div className="cart-container">
@@ -36,7 +36,9 @@ const RouterComponent = ({ toggleTheme }) => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/products" element={<Products />} />
+        {/* <Route path="/products" element={<Products />} /> */}
+        <Route path="/products/:categoryName" element={<Products />} />
+        <Route path="/categories" element={<CategoriesComponent />} />
         <Route path="/product/:id" element={<ExtandProduct />} />
         <Route path="/cart" element={<CartComponent />} />
         <Route path="/checkout" element={<CheckoutComponent />} />
