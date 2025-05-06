@@ -10,6 +10,7 @@ import CheckoutComponent from './Cart/CheckoutComponent';
 import CartComponentIcon from './Cart/CartComponentIcon';
 import CartComponent from './Cart/CartComponent';
 import '../css/nav.css';
+import SearchFieldComponent from './SearchFieldComponent';
 import CategoriesComponent from './CategoriesComponent';
 const RouterComponent = ({ toggleTheme }) => {
   return (
@@ -30,6 +31,7 @@ const RouterComponent = ({ toggleTheme }) => {
             <Link to="/cart">
               <CartComponentIcon />
             </Link>
+            <SearchFieldComponent></SearchFieldComponent>
           </div>
         </Container>
       </Navbar>
