@@ -2,14 +2,13 @@
 
 
 const categories = [
-
     {
         id: 1,
-        name: "tents",
-        image: require("../assets/camping/tent/1.jpg"),
-        description: "אוהלים איכותיים לכל סוגי הקמפינג והטיולים.",
-
+        name: "Shoes",
+        image: require("../assets/camping/OutdoorFurniture/1.jpg"),
+        description: "ריהוט חוץ נוח ואיכותי לכל סוגי הקמפינג.",
     },
+    
     {
         id: 2,
         name: "sleepingBags",
@@ -29,10 +28,11 @@ const categories = [
         description: "ריהוט חוץ נוח ואיכותי לכל סוגי הקמפינג.",
     },
     {
-        id: 5,
-        name: "shoes",
-        image: require("../assets/camping/OutdoorFurniture/1.jpg"),
-        description: "ריהוט חוץ נוח ואיכותי לכל סוגי הקמפינג.",
+        id:5,
+        name: "tents",
+        image: require("../assets/camping/tent/1.jpg"),
+        description: "אוהלים איכותיים לכל סוגי הקמפינג והטיולים.",
+
     },
     {
         id: 6,
