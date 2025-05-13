@@ -1,19 +1,22 @@
-
-
-
-import QuantityControl from '../components/QantityButton.js'
-export const About = ()=>{
+import QuantityControl from '../components/QantityButton.js';
+import "../css/about.css";
+export const About = () => {
     return(
-        <div className='about'>
-            <h1>About Us</h1>
-            <p>We are a travel product company dedicated to providing the best products for your travel needs.</p>
-            <h2>Our Mission</h2>
-            <p>To make travel easier and more enjoyable for everyone.</p>
-            <h2>Our Team</h2>
-            <p>We have a team of experienced professionals who are passionate about travel and customer service.</p>
-            <h2>Contact Us</h2>
+        <div className='about-container'>
+            <h1>אודותינו</h1>
+            <p>ב-<strong>WanderWise</strong> אנחנו לא רק מוכרים מוצרים לטיולים — אנחנו מביאים לך את הכלים להפוך את הדרך שלך לחוויה בלתי נשכחת. עם ניסיון של שנים והבנה מעמיקה של הצרכים של מטיילים, המוצרים שלנו מיוצרים כדי לשדרג כל צעד בדרך.</p>
             
+            <h2>החזון שלנו</h2>
+            <p>אנו מאמינים כי טיול הוא אחד מההנאות הגדולות ביותר בחיים, והמטרה שלנו היא פשוטה: להפוך את הנסיעות שלך לחלקות, בטוחות ומהנות יותר. בין אם אתה חוצה יבשות ובין אם אתה חוקר את השכונה שלך, אנו מציעים לך את כל מה שאתה צריך כדי לטייל בצורה חכמה, בקלות ובביטחון.</p>
+            
+            <h2>למה לבחור דווקא בנו?</h2>
+            <p>בניגוד למוכרי מוצרים אחרים לטיולים, אנחנו מתמקדים באיכות, חידוש ושירות לקוחות מצוין. המוצרים שלנו נבדקים בקפידה, כדי לוודא שהם עומדים באתגרים של הדרך. אנחנו לא רק רוצים למכור לך מוצר — אנחנו רוצים לספק לך שותף נאמן במסע שלך.</p>
+            
+            <h2>הצוות שלנו</h2>
+            <p>הצוות שלנו מורכב ממטיילים נלהבים, מומחים בתחום המוצרים ואנשי שירות לקוחות שמבינים את הצרכים הייחודיים של כל מטייל. אנחנו חיים ונושמים טיולים, ומחויבים להפוך את החוויה שלך למהנה יותר.</p>
+            
+            <h2>צור קשר</h2>
+            <p>יש לך שאלות או אתה זקוק לייעוץ? אנחנו כאן כדי לעזור. פנה אלינו ותן לנו להדריך אותך בדרך שלך. ההרפתקה הבאה שלך מתחילה איתנו.</p>
         </div>
-    
     );
-}
+};

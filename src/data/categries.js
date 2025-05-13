@@ -30,14 +30,14 @@ const categories = [
     },
     {
         id: 5,
-        name: "shoes",
-        image: require("../assets/camping/OutdoorFurniture/1.jpg"),
+        name: "Shoes",
+        image: require("../assets/imgs/shoes/Blundstone1.png"),
         description: "ריהוט חוץ נוח ואיכותי לכל סוגי הקמפינג.",
     },
     {
         id: 6,
-        name: "hammocks",
-        image: require("../assets/camping/OutdoorFurniture/1.jpg"),
+        name: "Hammocks",
+        image: require("../assets/camping/hammocks/2d956cf1fd281db114f8dfcea2ebe050.jpg 139.jpg"),
         description: "ריהוט חוץ נוח ואיכותי לכל סוגי הקמפינג.",
     },
 

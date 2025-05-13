@@ -1,0 +1,70 @@
+.search-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f4f6f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* מגביל את רוחב שדה החיפוש */
+}
+
+.search input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    width: 80%;
+    margin-right: 10px;
+}
+
+.search-button {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #1f6fa5;
+}
+
+.search-results {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-results h2 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.search-results a {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+}
+
+.search-results a:hover {
+    text-decoration: underline;
+}
+
+.search-results p {
+    color: #e74c3c;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
