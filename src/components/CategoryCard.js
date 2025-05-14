@@ -1,12 +1,7 @@
 import { ImgComponent } from "./ImgComponent";
 
-
-
 export const CategoryCard = ({ category }) => {
-    console.log(category, "category");
-    
-    return (
-        
+    return (    
         <div className="category-card">
             <ImgComponent path={category.image} />
             <h3 className="category-name">{category.name}</h3>

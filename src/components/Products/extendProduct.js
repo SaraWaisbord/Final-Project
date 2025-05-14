@@ -1,18 +1,30 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import {addProductToCart,reduceFromInventory,removeProductFromCart,addToInventory} from "../../state/actions/action";
+import { addProductToCart } from "../../state/slices/cartSlice";
+import { reduceFromInventory } from "../../state/slices/inventorySlice";
 import ExtandProductView from "../Products/ExtandProductView";
 import QuantityControl from "../QantityButton";
 import "../../css/extendProduct.css";
 
 export const ExtandProduct = () => {
   const { id } = useParams();
+  const productId = parseInt(id, 10);
   const dispatch = useDispatch();
+
   const product = useSelector((state) =>
-    state.inventory.products.find((p) => p.id == id)
+    state.inventory.products.find((p) => p.id === productId)
   );
   const [quantity, setQuantity] = useState(1);
+
+  const handleAddToCart = () => {
+    if (product.inventory < quantity) return;
+    dispatch(addProductToCart({ product, quantity }))?console.log("added to cart"):console.log("not added to cart");
+    // Update the inventory
+    dispatch(reduceFromInventory({ product, quantity }))?console.log("inventory updated"):console.log("not updated");
+    // Reset quantity to 1 after adding to cart
+    setQuantity(1);
+  };
 
   if (!product) {
     return <div>המוצר לא נמצא.</div>;
@@ -26,24 +38,27 @@ export const ExtandProduct = () => {
         </div>
         <div className="product-info">
           <h2 className="product-title">{product.description}</h2>
-          <QuantityControl quantity={quantity}
+          <QuantityControl
+            quantity={quantity}
             maxQuantity={product.inventory}
-            onIncrease={() => setQuantity(q => Math.min(q + 1, product.inventory))}
-            onDecrease={() => setQuantity(q => Math.max(q - 1, 1))}/>
+            onIncrease={() =>
+              setQuantity((q) => Math.min(q + 1, product.inventory))
+            }
+            onDecrease={() => setQuantity((q) => Math.max(q - 1, 1))}
+          />
 
-            <p>{product.price}</p>
-            {product.soldOut === false ?
-            <button
-            className="product-button"
-            onClick={() =>{
-              dispatch(addProductToCart({ product: product, quantity: quantity }));
-              dispatch(reduceFromInventory({product:product,quantity:quantity}));
-              setQuantity(1);
-            }}>
-            הוסף לסל
-          </button>:
-           (
+          <p>מחיר: {product.price}₪</p>
+
+          {product.soldOut ? (
             <p>לא קיים במלאי</p>
+          ) : (
+            <button
+              className="product-button"
+              onClick={handleAddToCart}
+              disabled={product.inventory < quantity}
+            >
+              הוסף לסל
+            </button>
           )}
         </div>
       </div>

@@ -11,7 +11,7 @@ import CartComponentIcon from './Cart/CartComponentIcon';
 import CartComponent from './Cart/CartComponent';
 import '../css/nav.css';
 import SearchFieldComponent from './SearchFieldComponent';
-import CategoriesComponent from './CategoriesComponent';
+import CategoriesDropdown from './CategoriesComponent';
 const RouterComponent = ({ toggleTheme }) => {
   return (
     <Router>
@@ -39,7 +39,7 @@ const RouterComponent = ({ toggleTheme }) => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/products/:categoryName" element={<Products />} />
-        <Route path="/categories" element={<CategoriesComponent />} />
+        <Route path="/categories" element={<CategoriesDropdown />} />
         <Route path="/product/:id" element={<ExtandProduct />} />
         <Route path="/cart" element={<CartComponent />} />
         <Route path="/checkout" element={<CheckoutComponent />} />

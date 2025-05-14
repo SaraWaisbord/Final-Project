@@ -1,14 +1,14 @@
-
-import {createStore,combineReducers, applyMiddleware} from 'redux';
-import { productReducer } from '../reducers/productReducer';
-// import { persistStore } from 'redux-persist';
-import {cartReducer} from '../reducers/cartReducer';
-import { inventoryReducer } from '../reducers/inventoryReducer';
-const rootReducers = combineReducers({
-    products:productReducer,
-    cart:cartReducer,
-    inventory:inventoryReducer,
+// app/store.js
+import { configureStore } from '@reduxjs/toolkit';
+import cartSlice from '../slices/cartSlice';
+import inventorySlice from '../slices/inventorySlice';
+import productSlice from '../slices/productSlice';
+const store = configureStore({
+  reducer: {
+    cart: cartSlice,
+    inventory: inventorySlice,
+    products: productSlice,
+  },
 });
-const store  = createStore(rootReducers);
-// const store = createStore(rootReducers,applyMiddleware(formMiddlware));
+
 export default store;
