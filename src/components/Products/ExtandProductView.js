@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ImgComponent } from "../ImgComponent";
 import "../../css/extandProductView.css";
-
+//קומפוננטת תצוגה לתמונות נמוצר
 const ExtandProductView = ({ imagArry }) => {
   const [mainImg, setMainImg] = useState(imagArry[0]);
   const [startIndex, setStartIndex] = useState(0);

@@ -6,13 +6,16 @@ import { ImgComponent } from '../components/ImgComponent.js';
 import b from '../assets/img2/Homme.png'
 import a from '../assets/img2/shadow.png'
 import { ChosenCategory } from '../components/Home/ChosenCategory.js';
-export const Home = ()=>{
+import {Link} from 'react-router-dom';
+export  const Home = ()=>{
     
     return (
         <div className="home-container">
         <div className="full-width-image-wrapper">
         <ImgComponent path={b} className="home-header-img" />
+       <Link to="/categories">
         <button className='home-header-btn-categories'>לקטגוריות</button>
+        </Link>
       </div>
         <div className="home"> 
               <ProductPage className='productPage'></ProductPage>

@@ -1,13 +1,13 @@
 import '../../css/FeaturedProduct.css'
 import { Link } from 'react-router-dom';
 import { ImgComponent } from '../ImgComponent';
+//המוצרים בנבחרים עם הנחה
 const FeaturedProduct = ({ product }) => {
-
     if (!product) {
         return <div>המוצר לא נמצא.</div>;
       }
     
-//המצאתי הנחה
+// הנחה למוצרים מסוימים
   const discount = product.oldPrice
     ? Math.round(50 - (product.price / product.oldPrice) * 50)
     : null;

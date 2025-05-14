@@ -2,7 +2,7 @@ import React from 'react';
 import categories from '../data/categries';
 import { Link } from 'react-router-dom';
 import "../css/categoriesDropdown.css";
-
+//הצגת המוצרים לפי קטגוריות
 const CategoriesDropdown = () => {
   return (
     <div className="dropdown-container">

@@ -4,7 +4,7 @@ import { addProductToCart } from "../../state/slices/cartSlice";
 import { reduceFromInventory } from "../../state/slices/inventorySlice";
 import { ImgComponent } from "../ImgComponent";
 import { Link } from 'react-router-dom';
-
+//קומפוננטת מוצר
 const Product = ({ id }) => {
   const dispatch = useDispatch();
   const productId = parseInt(id, 10);
@@ -16,7 +16,7 @@ const Product = ({ id }) => {
   if (!product) {
     return <div>המוצר לא נמצא.</div>;
   }
-
+//הוספה לסל ועדכון המלאי
   const handleAddToCart = () => {
     if (product.inventory > 0) {
       dispatch(addProductToCart({ product, quantity: 1 }))?console.log("added to cart"):console.log("not added to cart");

@@ -3,11 +3,11 @@ import { useSelector } from 'react-redux';
 import '../../css/productScreen.css';
 import ProductComponent from "../Products/ProductComponent";
 import { useParams } from 'react-router-dom';
-
+//הצגת המוצר
 export const ProductScreen = () => {
   const productsData = useSelector((state) => state.products.products);
   const { categoryName } = useParams();
-
+//הצגה לפי קטגוריה
   const filteredProducts = useMemo(() =>
     productsData.filter(product => product.category === categoryName),
     [productsData, categoryName]

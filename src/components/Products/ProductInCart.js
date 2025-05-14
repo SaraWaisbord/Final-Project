@@ -17,8 +17,8 @@ const ProductInCart = ({ id }) => {
     const product = useSelector((state) =>
         state.products.products.find((p) => p.id === id)
     );
-//ייעול כמו שלמדנו בשיעור האחרון
-const totalPrice = useMemo(() => {
+//ייעול חישוב כמות המוצרים
+    const totalPrice = useMemo(() => {
     if (!product) return '0.00';
     return (product.price * quantity).toFixed(2);
 }, [product, quantity]);
@@ -37,7 +37,7 @@ const totalPrice = useMemo(() => {
             dispatch(reduceFromInventory({ product, quantity: 1 }));
         }
     }, [dispatch, product]);
-//הורדה מהסל
+//הורדה מהסל שימוש בuseCallback ליעילות
     const handleDecrease = useCallback(() => {
         if (quantity > 1) {
             dispatch(decreaseProductQuantity({ product, quantity: 1 }));

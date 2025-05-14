@@ -5,7 +5,7 @@ import ChosenProductsData from "../../data/chosenProduct.js";
 import "../../css/ChosenProducts.css";
 import Slider from "react-slick";
 import { useRef } from "react";
-
+//שימוש בslider לקרוסלת מוצרים נבחרים ,שימוש בuseRef ליעילות
 const ProductPage = () => {
   const products = ChosenProductsData;
   const sliderRef = useRef(null);

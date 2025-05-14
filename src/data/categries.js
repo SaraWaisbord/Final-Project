@@ -5,7 +5,7 @@ const categories = [
     {
         id: 1,
         name: "Shoes",
-        image: require("../assets/camping/OutdoorFurniture/1.jpg"),
+        image: require("../assets/imgs/shoes/Blundstone1.png"),
         description: "ריהוט חוץ נוח ואיכותי לכל סוגי הקמפינג.",
     },
     

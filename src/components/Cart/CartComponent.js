@@ -1,17 +1,23 @@
 import ProductInCart from '../Products/ProductInCart';
 import { useSelector } from 'react-redux';
+import { useMemo } from 'react';
 import '../../css/cartPopUp.css';
 import { Link } from 'react-router-dom';
 import '../../css/cartComponent.css';
 
+// קומפוננטת סל הקניות
 const CartComponent = () => {
     const productsInCart = useSelector((state) => state.cart.products);
-    const totalAmount = productsInCart
-        .reduce((acc, item) => acc + item.product.price * item.quantity, 0)
-        .toFixed(2);
-
-    const shippingCost = totalAmount > 300 ? 0 : 50;
-
+//חישוב מחיר כולל של הסל ,שימוש useMemo ליעילות
+    const totalAmount = useMemo(() => {
+        return productsInCart
+            .reduce((acc, item) => acc + item.product.price * item.quantity, 0)
+            .toFixed(2);
+    }, [productsInCart]); // Dependency array to recalculate when productsInCart changes
+    //משלוח חינם מעל 300 שקל
+    var shippingCost = totalAmount > 300 ? 0 : 50;
+    if(productsInCart.length==0)
+        shippingCost=0;
     const totalToPay = (parseFloat(totalAmount) + shippingCost).toFixed(2);
 
     return (
@@ -23,10 +29,9 @@ const CartComponent = () => {
                 </button>
 
                 <div className="cart-items-list-cont">
-                    {productsInCart.map((item) => ( console.log(item.product.id),
+                    {productsInCart.map((item) => (
                         <div className="cart-extand-item" key={item.product.id}>
                             <ProductInCart id={item.product.id} />
-  
                         </div>
                     ))}
                 </div>
@@ -41,7 +46,7 @@ const CartComponent = () => {
                     <hr />
                     <div className="summary-row">
                         <span>משלוח:</span>
-                        <span>{shippingCost === 0 ? "חינם" : `${shippingCost}₪`}</span>
+                        <span>{shippingCost === 0 && productsInCart.length!=0? "חינם" : `${shippingCost}₪`}</span>
                     </div>
                     <hr />
                     <div className="summary-row">

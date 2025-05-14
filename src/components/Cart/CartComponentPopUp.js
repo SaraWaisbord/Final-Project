@@ -2,7 +2,7 @@ import ProductInCart from '../Products/ProductInCart';
 import { useSelector } from 'react-redux';
 import '../../css/cartPopUp.css';
 import { Link } from 'react-router-dom';
-
+//קומפוננטת סל הקניות popUp
 const CartComponentPopUp = ({ onClose }) => {
     const products = useSelector((state) => state.cart.products);
 

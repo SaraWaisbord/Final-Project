@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "../../css/checkout.css"; // עיצוב כולל אנימציות ואייקונים
 import { FaCreditCard } from "react-icons/fa"; // סמל כרטיס אשראי (FontAwesome)
-
+import { useDispatch } from "react-redux";
+import { removeAll } from "../../state/slices/cartSlice";
 const CheckoutComponent = () => {
+  const dispatch = useDispatch();
   const [step, setStep] = useState(1); // לניהול שלב התהליך
   const [loading, setLoading] = useState(false); // מציג אנימציה של טעינה
   const [personalDetails, setPersonalDetails] = useState({
@@ -19,7 +21,8 @@ const CheckoutComponent = () => {
   });
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
-
+  
+  
   // ניהול שינויים בשדות של פרטים אישיים
   const handlePersonalChange = (e) => {
     const { name, value } = e.target;
@@ -208,7 +211,7 @@ const CheckoutComponent = () => {
               <button type="button" onClick={prevStep}>
                 Back
               </button>
-              <button type="submit">Submit</button>
+              <button type="submit" onClick={()=>{dispatch(removeAll())}}>Submit</button>
             </>
           )}
         </form>

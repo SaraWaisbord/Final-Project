@@ -12,16 +12,18 @@ import CartComponent from './Cart/CartComponent';
 import '../css/nav.css';
 import SearchFieldComponent from './SearchFieldComponent';
 import CategoriesDropdown from './CategoriesComponent';
+//קומפוננטת ניוווט
+
 const RouterComponent = ({ toggleTheme }) => {
   return (
     <Router>
       <Navbar bg="dark" variant="dark" className="tech-navbar">
         <Container>
-          <Navbar.Brand className="brand-logo">Travel Product</Navbar.Brand>
+          <Navbar.Brand className="brand-logo">דרך ארץ</Navbar.Brand>
           <Nav className="me-auto nav-links">
-          <Nav.Link as={Link} to="/" className="nav-link-item home">Home</Nav.Link>
-          <Nav.Link as={Link} to="/about" className="nav-link-item about">About</Nav.Link>
-          <Nav.Link as={Link} to="/categories" className="nav-link-item products">Products</Nav.Link>
+          <Nav.Link as={Link} to="/" className="nav-link-item home">בית</Nav.Link>
+          <Nav.Link as={Link} to="/about" className="nav-link-item about">אודות</Nav.Link>
+          <Nav.Link as={Link} to="/categories" className="nav-link-item products">מוצרים</Nav.Link>
 
           </Nav>
           <div className="cart-container">
@@ -31,7 +33,7 @@ const RouterComponent = ({ toggleTheme }) => {
             <Link to="/cart">
               <CartComponentIcon />
             </Link>
-            <SearchFieldComponent></SearchFieldComponent>
+            {/* <SearchFieldComponent></SearchFieldComponent> */}
           </div>
         </Container>
       </Navbar>

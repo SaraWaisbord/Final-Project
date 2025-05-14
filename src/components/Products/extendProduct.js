@@ -6,7 +6,7 @@ import { reduceFromInventory } from "../../state/slices/inventorySlice";
 import ExtandProductView from "../Products/ExtandProductView";
 import QuantityControl from "../QantityButton";
 import "../../css/extendProduct.css";
-
+//קומפוננטת תצוגה למוצר מורחב
 export const ExtandProduct = () => {
   const { id } = useParams();
   const productId = parseInt(id, 10);
@@ -42,13 +42,13 @@ export const ExtandProduct = () => {
             quantity={quantity}
             maxQuantity={product.inventory}
             onIncrease={() =>
-              setQuantity((q) => Math.min(q + 1, product.inventory))
+              setQuantity((q) => Math.min(q + 1, product.inventory))//שינוי תצוגת המספר בהתאם למלאי
             }
             onDecrease={() => setQuantity((q) => Math.max(q - 1, 1))}
           />
 
           <p>מחיר: {product.price}₪</p>
-
+           {/* אם המוצר במלאי רואים אותו אם לא הוא נהיה אפור ולא פעיל */}
           {product.soldOut ? (
             <p>לא קיים במלאי</p>
           ) : (

@@ -2,7 +2,7 @@ import categories from "../data/categries";
 import { Link } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import { useState } from "react";
-
+//שדה חיפוש של mui
 
 const SearchFieldComponent = () => {
     const [searchTerm, setSearchTerm] = useState('');

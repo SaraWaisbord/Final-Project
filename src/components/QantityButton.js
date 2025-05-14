@@ -1,4 +1,5 @@
 import '../css/QtnButton.css'
+//כפתור הוספה והורדה של מוצר
 const QuantityControl = ({ quantity, maxQuantity, onIncrease, onDecrease }) => {
   console.log('QuantityControl render');
   return (

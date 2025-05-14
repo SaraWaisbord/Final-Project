@@ -2,6 +2,7 @@ import { ImgComponent } from "../ImgComponent";
 import brands from "../../data/brand";
 import '../../css/brandCarousel.css'
 import Slider from "react-slick";
+//קרוסלת מותגים שימוש בslider
 export const BrandCarousel = () => {
     const brandsImg = brands;
     const settings = {
