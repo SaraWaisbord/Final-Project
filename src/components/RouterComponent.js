@@ -38,7 +38,6 @@ const RouterComponent = ({ toggleTheme }) => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        {/* <Route path="/products" element={<Products />} /> */}
         <Route path="/products/:categoryName" element={<Products />} />
         <Route path="/categories" element={<CategoriesComponent />} />
         <Route path="/product/:id" element={<ExtandProduct />} />

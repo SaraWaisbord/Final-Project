@@ -10,11 +10,7 @@ const SearchFieldComponent = () => {
         const filteredCategories = categories.find(category =>
             category.name===searchTerm)
         if (filteredCategories) {
-            return (<>
-             <Link to={`/products/${searchTerm}`}>
-                
-                </Link>
-            </>)
+            return (<><Link to={`/products/${searchTerm}`}></Link></>)
         }
         else {
             return (<>

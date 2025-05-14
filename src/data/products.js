@@ -533,7 +533,6 @@ soldOut:false,
   soldOut:false,
   }
   
-  
 ];
 
 export default dataDetails;

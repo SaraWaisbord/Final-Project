@@ -22,14 +22,14 @@ const totalPrice = useMemo(() => {
     return (product.price * quantity).toFixed(2);
 }, [product, quantity]);
 
-
+//מחיקה מהסל
     const handleRemove = useCallback(() => {
         if (product) {
             dispatch(removeProductFromCart(product));
             dispatch(addToInventory({ product, quantity }));
         }
     }, [dispatch, product, quantity]);
-
+//העלאה לסל
     const handleIncrease = useCallback(() => {
         if (product){
         if (product.inventory > 0) {
@@ -37,7 +37,7 @@ const totalPrice = useMemo(() => {
             dispatch(reduceFromInventory({ product, quantity: 1 }));
         }}
     }, [dispatch, product]);
-
+//הורדה מהסל
     const handleDecrease = useCallback(() => {
         dispatch(decreaseProductQuantity({ product, quantity: 1 }));
         dispatch(addToInventory({ product, quantity: 1 }));
