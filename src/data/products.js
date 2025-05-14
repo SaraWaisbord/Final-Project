@@ -134,24 +134,6 @@ const dataDetails = [
   },
 
   {
-<<<<<<< HEAD
-    id: 10,
-    description: "מזרון נוח בעובי 5 ס\"מ, אידיאלי לשינה בשטח",
-    price: 339,
-    imgs: [require("../assets/camping/sleepingBag/מזרון-שטח-mat-explorer-5cm.jpg 339.jpg")],
-    category: "SleepingBags",
-    longDesc: "מזרון שטח איכותי לשינה נעימה בכל תנאי שטח.\nעובי 5 ס\"מ לבידוד מרבי מפני הקרקע.\nנוח, עמיד וקל לקיפול, מושלם לקמפינג ומשפחות בטבע.",
-    inventory: 50,
-    soldOut: false,
-},
-{
-    id: 11,
-    description: "מזרון שטח XPE עבה במיוחד לקמפינג 4x4",
-    price: 129,
-    imgs: [require("../assets/camping/sleepingBag/מזרון-שטח-xpe-דו-שכבתי-עבה-לקמפינג-4x4.jpg 129ץ9.jpg")],
-    category: "SleepingBags",
-    longDesc: "מזרון שטח XPE עבה במיוחד לשינה איכותית בשטח.\nשכבה כפולה עמידה ללחות, קלה לניקוי ולקיפול.\nמתאים לרכבי שטח, קמפינג וטיולים ארוכים.",
-=======
     id: 1,
     description: "אוהל בן רגע לשש נפשות – שילוב מושלם של נוחות ומהירות הקמה",
     price: 59.99,
@@ -259,26 +241,11 @@ const dataDetails = [
     imgs: [require("../assets/camping/sleepingBag/מזרון-שטח-xpe-דו-שכבתי-עבה-לקמפינג-4x4.jpg 129ץ9.jpg")],
     category: "sleepingBags",
     longDesc: "מזרון שטח עשוי XPE דו-שכבתי, עבה במיוחד, אידיאלי לקמפינג ונסיעות שטח, מתאים ל-4x4.",
->>>>>>> 50ae5d172689cc472acf280134ac10af363978d0
     inventory: 50,
     soldOut: false,
 },
 {
     id: 12,
-<<<<<<< HEAD
-    description: "מזרון ביצים מתקפל בעובי 18 מ\"מ לנוחות מרבית",
-    price: 145,
-    imgs: [require("../assets/camping/sleepingBag/מזרון-שטח-מתקפל-ביצים-18-ממ-outdoor.jpg 145.jpg")],
-    category: "SleepingBags",
-    longDesc: "מזרון ביצים בעובי 18 מ\"מ בעל מבנה מבודד ונוח.\nמתקפל בקלות, קל לנשיאה ואחסון.\nעשוי חומר עמיד לשימוש חוזר, מתאים לתנאי שטח קשים.",
-    inventory: 50,
-    soldOut: false,
-},{
-    id: 13,
-    description: "מזרן ביציפ",
-    price:140,
-    imgs: [require("../assets/camping/sleepingBag/מזרן-ביצים-15-ממ-foldable-foam-mat-aluminum.jpg 145.jpg"),],
-=======
     description: "מזרון שטח מתקפל ביצים 18 מ\"מ",
     price: 145,
     imgs: [require("../assets/camping/sleepingBag/מזרון-שטח-מתקפל-ביצים-18-ממ-outdoor.jpg 145.jpg")],
@@ -292,7 +259,6 @@ const dataDetails = [
     description: "מזרן ביצים 15 מ\"מ מתקפל מוקצף עם אלומיניום",
     price: 140,
     imgs: [require("../assets/camping/sleepingBag/מזרן-ביצים-15-ממ-foldable-foam-mat-aluminum.jpg 145.jpg")],
->>>>>>> 50ae5d172689cc472acf280134ac10af363978d0
     category: "sleepingBags",
     longDesc: "מזרן מתקפל עם משטח ביצים בעובי 15 מ\"מ עשוי מוקצף ומשולב אלומיניום, קל ונוח לשימוש בטיולים.",
     inventory: 50,
@@ -300,15 +266,9 @@ const dataDetails = [
 },
 {
     id: 14,
-<<<<<<< HEAD
-    description: "מזרן שטח רחב",
-    price:85,
-    imgs: [require("../assets/camping/sleepingBag/מזרון-שטח-רחב-10-ממ.jpg 85.jpg"),],
-=======
     description: "מזרון שטח רחב 10 מ\"מ",
     price: 85,
     imgs: [require("../assets/camping/sleepingBag/מזרון-שטח-רחב-10-ממ.jpg 85.jpg")],
->>>>>>> 50ae5d172689cc472acf280134ac10af363978d0
     category: "sleepingBags",
     longDesc: "מזרון שטח רחב בעובי 10 מ\"מ, מספק נוחות ותמיכה בעת שינה בשטח.",
     inventory: 50,
@@ -316,15 +276,9 @@ const dataDetails = [
 },
 {
     id: 15,
-<<<<<<< HEAD
-    description: "מזרן שטח רך לקמפינג ולספורט",
-    price:55,
-    imgs: [require("../assets/camping/sleepingBag/מזרון-שטח-רך-לקמפינג-וספורט-1-סמ.jpg 52.4.jpg"),],
-=======
     description: "מזרון שטח רך לקמפינג וספורט בעובי 1 ס\"מ",
     price: 55,
     imgs: [require("../assets/camping/sleepingBag/מזרון-שטח-רך-לקמפינג-וספורט-1-סמ.jpg 52.4.jpg")],
->>>>>>> 50ae5d172689cc472acf280134ac10af363978d0
     category: "sleepingBags",
     longDesc: "מזרון שטח רך בעובי 1 ס\"מ, מתאים לקמפינג וספורט, קל לנשיאה ונוח לשימוש.",
     inventory: 50,
@@ -352,26 +306,6 @@ const dataDetails = [
   soldOut: false,
 },
 {
-<<<<<<< HEAD
-    id: 17,
-    description: "שק שינה moon" ,
-    price:350,
-    imgs: [require("../assets/camping/sleepingBag/שק-שינה-5-moon.jpg 350.jpg"),],
-    category: "sleepingBags",
-    longDesc: "A comfortable memory foam pillow for long trips.",
-    inventory: 50,
-    soldOut:false,
-},
-{
-    id: 18,
-    description: "שק שינה micro",
-    price:165,
-    imgs: [require("../assets/camping/sleepingBag/שק-שינה-micro.jpg 165.jpg"),],
-    category: "sleepingBags",
-    longDesc: "A comfortable memory foam pillow for long trips.",
-    inventory: 50,
-    soldOut:false,
-=======
   id: 18,
   description: "שק שינה Micro קל ונוח לנשיאה.",
   price: 165,
@@ -390,7 +324,6 @@ const dataDetails = [
   longDesc: "כסא ים מסוג Raptor, בעל מסגרת יציבה ועיצוב ארגונומי, מתאים ישיבה נוחה בחוף הים, בטיולים ובחצר הבית, קל לקיפול ונשיאה.",
   inventory: 50,
   soldOut: false,
->>>>>>> 50ae5d172689cc472acf280134ac10af363978d0
 },
 {
   id: 20,
@@ -403,34 +336,6 @@ const dataDetails = [
   soldOut: false,
 },
 {
-<<<<<<< HEAD
-    id: 20,
-    description: "שולחן שטח מתקפל",
-    price:402,
-    imgs: [require("../assets/camping/OutdoorFurniture/24d631f218e9607e6b38800287b19e5f.jpg 402.jpg"),],
-    category:  "OutdoorFurniture" ,
-    longDesc: "A comfortable memory foam pillow for long trips.",
-    inventory: 50,
-    soldOut:false,
-},{
-    id:21,
-    description:  "שולחן שטח מתקפל נוח במיוחד" ,
-    price:402,
-    imgs: [require("../assets/camping/OutdoorFurniture/2d3297afa4e229aa26f506160b848d81.jpg 402.jpg"),],
-    category:  "OutdoorFurniture" ,
-    longDesc: "A comfortable memory foam pillow for long trips.",
-    inventory: 50,
-    soldOut:false,
-},{
-    id: 22,
-    description: "שולחן שטח מתקפל נוח במיוחד" ,
-    price:229,
-    imgs: [require("../assets/camping/OutdoorFurniture/354f8e373102db6a182833f396e2850d.jpg 229.jpg"),],
-    category:  "OutdoorFurniture" ,
-    longDesc: "A comfortable memory foam pillow for long trips.",
-    inventory: 50,
-    soldOut:false,
-=======
   id: 21,
   description: "רהיטי שטח איכותיים לנוחות מקסימלית בטיולים.",
   price: 402,
@@ -439,7 +344,6 @@ const dataDetails = [
   longDesc: "מערך רהיטי שטח הכולל כסאות ושולחנות קלים ועמידים, המתאימים במיוחד לטיולים, קמפינג ושימוש מחוץ לבית, עם דגש על נוחות ופונקציונליות.",
   inventory: 50,
   soldOut: false,
->>>>>>> 50ae5d172689cc472acf280134ac10af363978d0
 },
 
 {
@@ -451,7 +355,6 @@ const dataDetails = [
   category:  "OutdoorFurniture" ,
   inventory: 50,
   soldOut:false,
-<<<<<<< HEAD
 }
 ,{
     id: 23,
@@ -609,187 +512,6 @@ const dataDetails = [
     inventory: 50,
     soldOut: false,
   },
-=======
-},
-{
-id: 6757,
-description: "סט מזוודות נוח ושימושי",
-longDesc: "סט מזוודות מרווח וקל משקל, המיועד לנסיעות ארוכות וקצרות. עשוי מחומרים איכותיים המבטיחים עמידות לאורך זמן, עם חלוקה פנימית נוחה לארגון הציוד.",
-price: 1299.9,
-imgs: [require("../assets/imgs/Travel bags/60145_100420241241131_large.jpg"),
-  require("../assets/imgs/Travel bags/60148_02122024185447_large.jpg"),
-  require("../assets/imgs/Travel bags/60149_100420241241141_large.jpg"),
-  require("../assets/imgs/Travel bags/60150_100420241241151_large.jpg"),
-],
-category: "travelBags",
-inventory: 10,
-soldOut:false,
-},
-{
-  id: 23,
-  
-  description: "שולחן מתקפל יציב בעל יכולת נשיאה עד 50",
-  longDesc: "שק שינה איכותי וקל משקל המציע נוחות מושלמת ללילות בשטח. עשוי מבדים עמידים ומבודדים לשמירה על חום הגוף גם בטמפרטורות נמוכות.",
-  price:219,
-  imgs: [require("../assets/camping/OutdoorFurniture/35c1e9cbda5c893658a76d5a8d7a3bde.jpg 219.jpg"),],
-  category:  "outdoorFurniture" ,
-  inventory: 50,
-  soldOut:false,
-},
-{
-  id: 24,
-  
-  description: "שולחן מתקפל קל משקל",
-  longDesc:"שולחן מתקפל עשוי מאלומיניום קל, אידיאלי לקמפינג ולטיולים. מספק שטח עבודה נוח וקל לנשיאה, מתאים לשימוש בחוץ ובפנים.",
-  price:150,
-  imgs: [require("../assets/camping/OutdoorFurniture/5fa7901beab44467c24ca7db7d7e2aa8.jpg 150.jpg"),],
-  category:  "outdoorFurniture" ,
-  inventory: 50,
-  soldOut:false,
-},
-{
-  id: 25, 
-  description: "משטח לנשיאה לקמפינג", 
-  longDesc: "מטח נשיאה קליל לסחיבת ציוד לקמפינג, עשוי מחומרים עמידים ומספק נוחות בשימוש. אידיאלי לטיולים ארוכים ולקמפינג.",
-  price:96,
-  imgs: [require("../assets/camping/OutdoorFurniture/d8f82ab58036537763a021c3b0aca6c7.jpg 96.jpg"),],
-  category:"outdoorFurniture",
-  inventory: 50,
-  soldOut:false,
-},
-{
-  id: 26,
- 
-  price:159.9,
-  imgs: [require("../assets/camping/OutdoorFurniture/כיסא-ים-עגול-lake.jpg 159.9.jpg"),],
-  category:  "outdoorFurniture",
-  description: "כסא ים עגול עם עיצוב נוח וקל לנשיאה.",
-  longDesc: "כסא ים עגול, קל משקל וקומפקטי, אידיאלי לשימוש בחוף הים ובטיולים. עשוי מחומרים עמידים למים, מספק נוחות ותמיכה לגב, קל לקיפול ונשיאה.",
-  inventory: 50,
-  soldOut:false,
-},
-{
-  id: 27,
-  price: 305,
-  imgs: [require("../assets/camping/OutdoorFurniture/כיסא-שטח-מתקפל-וקומפקטי-קליק.jpg"),
-    require("../assets/camping/OutdoorFurniture/כיסא-שטח-מתקפל-וקומפקטי-קליק (1).jpg"),
-    require("../assets/camping/OutdoorFurniture/כיסא-שטח-מתקפל-וקומפקטי-קליק (2).jpg"),
-    
-  ],
-  category: "outdoorFurniture",
-  description: "כסא שטח מתקפל עם גגון להגנה מהשמש.",
-  longDesc: "כסא שטח מתקפל עם גגון, אידיאלי לשימוש בחוף הים ובטיולים. מספק נוחות מקסימלית עם תמיכה לגב ויכולת להגן מפני קרני השמש, קל לנשיאה וכולל עיצוב ארגונומי.",
-  inventory: 50,
-  soldOut: false
-},
-{
-  id: 28,
-  price: 558.9,
-  imgs: [require("../assets/camping/OutdoorFurniture/כיסא-שטח-sand.jpg 558.9.jpg")],
-  category: "outdoorFurniture",
-  description: "כסא שטח לחובבי טיולים למנוחה נוחה.",
-  longDesc: "עשוי מחומרים עמידים, מתאים לתנאים  ומספק ימי קמפינג ארוכים.",
-  inventory: 50,
-  soldOut: false
-},
-{
-  id: 29,
-  price: 359,
-  imgs: [require("../assets/camping/OutdoorFurniture/כיסא-שטח-לקמפינג-mid-ivory.jpg 359.jpg")],
-  category: "outdoorFurniture",
-  description: "כסא שטח לקמפינג עם עיצוב מודרני.",
-  longDesc: "משלב נוחות ופרקטיות, מספק מקום מנוחה חמים ונעים אחרי יום של פעילות בטבע, קל לנשיאה ותחזוקה.",
-  inventory: 50,
-  soldOut: false
-},
-{
-  id: 30,
-  price: 359,
-  imgs: [require("../assets/camping/OutdoorFurniture/כיסא-שטח-מתקפל-אקספלורר-out-living.jpg")],
-  category: "outdoorFurniture",
-  description: "כסא שטח מתקפל עם עיצוב ארגונומי.",
-  longDesc: "מתאים למטיילים ולחובבי ההרפתקאות, מציע נוחות ונשיאה קלה לשהייה נעימה בשטח.",
-  inventory: 50,
-  soldOut: false
-},
-{
-  id: 31,
-  price: 399.9,
-  imgs: [require("../assets/camping/OutdoorFurniture/כסא-במאי-מתקפל-guro.jpg 399.9.jpg")],
-  category: "outdoorFurniture",
-  description: " כסא שטח מתקפל עם תמיכה מעולה.",
-  longDesc: "וכסא שטח מתקפל עם תמיכה מעולה לגב, אידיאלי לשימוש בטבע ובחוף הים. עשוי מחומרים עמידים, קל לנשיאה וכולל עיצוב ארגונומי להבטחת נוחות מקסימלית.",
-  inventory: 50,
-  soldOut: false
-},
-{
-  id: 32,
-  price: 735,
-  imgs: [require("../assets/camping/OutdoorFurniture/עגלת-שטח-מתקפלת-לקמפינג-mustang.jpg 735.jpg")],
-  category: "outdoorFurniture",
-  description: "עגלת שטח מתקפלת לקמפינג",
-  longDesc: "עגלת שטח מתקפלת, אידיאלית לשימוש בטיולים ובקמפינג. מאפשרת נשיאה נוחה של ציוד ומספקת פתרון פרקטי להובלת חפצים בשטח. עשויה מחומרים עמידים, קלה לנשיאה וכוללת גלגלים חזקים להנעה קלה.",
-  inventory: 50,
-  soldOut: false
-},
-{
-  id: 33,
-  price: 120,
-  imgs: [require("../assets/camping/hammocks/08bcf1551e8b83d89df9463223e57b2a.jpg 120.jpg")],
-  category: "hammocks",
-  description: "ערסל מפנק לטיולים משפחתיים בטבע",
-  longDesc: "ערסל איכותי עם עיצוב מודרני, אידיאלי לשימוש בטבע ובחוף הים. קל לתלייה ונשיאה, מספק נוחות מקסימלית ומאפשר מנוחה מושלמת. כולל ערכת תליה מקצועית להקלה על השימוש.",
-  soldOut: false
-},
-{
-  id: 34,
-  description: "ערסל בד מושלם לשימוש בטבע",
-  price:139,
-  imgs: [require("../assets/camping/hammocks/2d956cf1fd281db114f8dfcea2ebe050.jpg 139.jpg"),],
-  category:  "hammocks",
-  longDesc: "ערסל בד איכותי בצבעים שונים, אידיאלי לשימוש בטבע ובחוף הים. קל לתלייה ונשיאה, מספק נוחות מקסימלית ומאפשר מנוחה מושלמת. כולל ערכת תליה מקצועית להקלה על השימוש.",
-  inventory: 50,
-  soldOut:false,
-  },{
-  id: 35,
-  description: "ערסל בד איכותי עם ערכת תליה",
-  price:90,
-  imgs: [require("../assets/camping/hammocks/6295d148f28de6a9d60c62dd2c2c7dee.jpg 90.jpg"),],
-  category:  "hammocks",
-  longDesc:"ערסל בד איכותי בצבעים שונים, כולל ערכת תליה מקצועית. אידיאלי לשימוש בטבע, בחוף הים או בגינה. קל לתלייה ונשיאה, מספק נוחות מקסימלית ומאפשר מנוחה מושלמת.",
-  inventory: 50,
-  soldOut:false,
-  },{
-  id: 36,
-  description: "ערסל בד מצנח ברונזה עם ערכת תליה",
-  price:150,
-  imgs: [require("../assets/camping/hammocks/GN ULTRA LIGHT ערסל בד מצנח ברונזה עם ערכת תליה מבית GoNature 150.jpg"),],
-  category:  "hammocks",
-  longDesc: "ערסל קל משקל מבד מצנח איכותי בצבע ברונזה, כולל ערכת תליה מקצועית מבית GoNature. מושלם לטיולים ולנופש בטבע, נוח ומהיר לתלייה עם עמידות גבוהה לשימוש לאורך זמן.",
-  inventory: 50,
-  soldOut:false,
-  },{
-  id: 38,
-  description: "זוג טבעות שאקל לערסל",
-  price:38,
-  imgs: [require("../assets/camping/hammocks/זוג טבעות שאקל לערסל38.png"),],
-  category:  "hammocks",
-  longDesc: "זוג טבעות שאקל איכותיות לחיזוק וייצוב הערסל. מתאימות לכל סוגי הערסלים ומספקות עמידות ובטיחות מקסימלית במהלך השימוש. קלות להתקנה ולשימוש חוזר.",
-  inventory: 50,
-  soldOut:false,
-  },{
-  id: 39,
-  description: "ערסל בד מצנח ירוק עם ערכת תליה",
-  price:90,
-  imgs: [require("../assets/camping/hammocks/ערסל בד מצנח ירוק עם ערכת תליה מבית GoNature.jpg"),],
-  category:  "hammocks",
-  longDesc: "ערסל בד מצנח איכותי בצבע ירוק, כולל ערכת תליה מקצועית מבית GoNature. אידיאלי לטיולי קמפינג ונופש בטבע, נוח לשימוש ועמיד לתנאי שטח שונים, מתכוונן בקלות לשימוש מהיר.",
-  inventory: 50,
-  soldOut:false,
-  }
-  
-  
->>>>>>> 50ae5d172689cc472acf280134ac10af363978d0
 ];
 
 export default dataDetails;

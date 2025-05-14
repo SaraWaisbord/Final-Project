@@ -28,18 +28,10 @@ const categories = [
         description: "ריהוט חוץ נוח ואיכותי לכל סוגי הקמפינג.",
     },
     {
-<<<<<<< HEAD
         id: 5,
         name: "Shoes",
         image: require("../assets/imgs/shoes/Blundstone1.png"),
         description: "ריהוט חוץ נוח ואיכותי לכל סוגי הקמפינג.",
-=======
-        id:5,
-        name: "tents",
-        image: require("../assets/camping/tent/1.jpg"),
-        description: "אוהלים איכותיים לכל סוגי הקמפינג והטיולים.",
-
->>>>>>> 50ae5d172689cc472acf280134ac10af363978d0
     },
     {
         id: 6,
